@@ -1,0 +1,71 @@
+# ╭────────────────────────────ImplementationGuide-hl7.org.nz.hpi.json─────────────────────────────╮
+
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+
+# │  supported properties, see:                                                                    │
+
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+id: hl7.org.nz.fhir.ig.mws
+canonical: http://hl7.org.nz/fhir/ig/mws
+version: 1.0.0
+name: NewZealandMWSIG
+title: New Zealand MWS IG
+status: active
+publisher:
+  name: Te Whatu Ora
+  email: mailto:integration@health.govt.nz
+description: The FHIR  API for Medical Warnings
+license: CC0-1.0
+dependencies:
+  fhir.org.nz.ig.base:
+    uri: 'https://fhir.org.nz/ig/base/'   
+    version: 2.0.0
+  hl7.org.nz.fhir.ig.hip-core:
+    #uri: https://tst.d1gti5r1pqczdn.amplifyapp.com/site
+    #version: 1.2.0
+    uri: https://common-ig.hip.digital.health.nz/site
+    version: 1.5.3
+    
+   
+fhirVersion: 4.0.1
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: Release
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+  Business View: businessView.html
+  Use cases:
+    Get Enrolment: getAllergyIntolerance.html
+    Search Enrolments: searchAllergyIntolerance.html
+ 
+  Important information:
+    Onboarding: Onboarding.html
+    General Notes: general.html
+    FAQ: FAQ.html
+    Glossary: glossary.html
+  Compliance testing:
+    Compliance testing important information: ComplianceTestingImportantInformation.html
+   
+  API: API.html
+  Profiles: profiles.html
+
+  Terminology: terminology.html
+  Table of Contents: toc.html
+  Artifact Index: artifacts.html
+  Support:
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
+    Download IG: full-ig.zip
+    Artifacts (Json): definitions.json.zip
+    Artifacts (Xml): definitions.xml.zip
+    
+
+    
