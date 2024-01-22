@@ -1,0 +1,73 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.org.nz.fhir.ig.mws",
+  "url": "http://hl7.org.nz/fhir/ig/mws/ImplementationGuide/hl7.org.nz.fhir.ig.mws",
+  "version": "1.0.0",
+  "name": "NewZealandMWSIG",
+  "title": "New Zealand MWS IG",
+  "status": "active",
+  "publisher": "Te Whatu Ora",
+  "contact": [
+    {
+      "name": "Te Whatu Ora",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:integration@health.govt.nz"
+        }
+      ]
+    }
+  ],
+  "description": "The FHIR  API for Medical Warnings",
+  "packageId": "hl7.org.nz.fhir.ig.mws",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "fhir.org.nz.ig.base",
+      "uri": "https://fhir.org.nz/ig/base/",
+      "version": "2.0.0",
+      "id": "fhir_org_nz_ig_base"
+    },
+    {
+      "packageId": "hl7.org.nz.fhir.ig.hip-core",
+      "uri": "https://common-ig.hip.digital.health.nz/site",
+      "version": "1.5.3",
+      "id": "hl7_org_nz_fhir_ig_hip_core"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MwsAllergyIntolerance"
+        },
+        "name": "MwsAllergyIntolerance",
+        "description": "Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": []
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "Release"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}
