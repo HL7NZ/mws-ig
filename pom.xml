@@ -20,6 +20,22 @@
 			<classifier>fhir-resources</classifier>
 			<type>zip</type>
 		</dependency>
+		
+		<dependency>
+			<groupId>nz.health.digital.nhi.fhir</groupId>
+			<artifactId>hip-nhi-conformance-module</artifactId>
+			<version>${nhi-ig-version}</version>
+			<classifier>zip</classifier>
+			<type>zip</type>
+		</dependency>
+
+		<dependency>
+			<groupId>nz.health.digital.hpi.fhir</groupId>
+			<artifactId>hip-hpi-conformance-module</artifactId>
+			<version>${hpi-ig-version}</version>
+			<type>zip</type>
+		</dependency>
+
 
 
 		<dependency>
