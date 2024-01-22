@@ -1,0 +1,77 @@
+version: 0.2
+env:
+    secrets-manager:
+      GITUSERNAME: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:username'
+      GITTOKEN: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:secrets.hip-hl7nz-github-m2GhOv:token'
+      MAVEN_USER: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.username:hip-secrets.nexus.username'
+      MAVEN_PASSWORD: 'arn:aws:secretsmanager:ap-southeast-2:262112264387:secret:hip-secrets.nexus.password:hip-secrets.nexus.password'
+  
+    
+phases:
+  install:
+    runtime-versions:   
+      java: corretto17
+      nodejs: 16
+      ruby: 3.1
+    commands:
+      - env
+      - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/settings-clean.xml - | envsubst > /root/.m2/settings.xml  
+      - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar  >/dev/null 2>&1
+      - cp publisher.jar ~/publisher.jar
+      # gettign  a 404 from githunb so getting this from s3
+      # - wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar  >/dev/null 2>&1     
+      # - cp validator_cli.jar ~/validator_cli.jar 
+      - aws s3 cp s3://nz-govt-moh-hip-build/codebuild-common/fhir/validator_cli.jar ~/validator_cli.jar
+      - npm config set proxy http://WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128
+      - npm install -g fsh-sushi
+      - npm install markdown
+      - npm install remarkable
+      - gem install jekyll bundler
+      - sudo wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  https://github.com/mikefarah/yq/releases/download/v4.28.1/yq_linux_386 -O /usr/bin/yq &&     
+      - sudo chmod +x /usr/bin/yq
+      - yum install git -y
+  pre_build:
+    commands:   
+      - sushi -v
+      - jekyll -v
+      - java -jar ./publisher.jar -v
+     
+     
+  build:
+    commands:
+      - ls 
+      - rm -r -f ./nes-ig 
+      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/mws-ig     
+      - cd mws-ig
+      - git checkout $BRANCH
+      - ls
+      - echo getting dependencies
+      #- mvn package -ntp
+      # unpackage dependancy conformance artifact zips
+      - mvn validate
+      - echo building IG
+      - ls -l
+      - sudo chmod +x ./build-ig-cicd.sh     
+      - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
+       # deploy the nes conformance artifacts 
+      - cat pom.xml    
+      - cat /root/.m2/settings.xml
+      - mvn deploy 
+      - echo checking in full-ig.zip
+      - git add -f ./output/full-ig.zip
+      - git commit -m "new IG build"
+      - git push
+      
+
+     
+      
+artifacts:
+  files:
+    - 'nes-ig/output/full-ig.zip'
+    - 'nes-ig/target/*.zip'
+    - 'nes-ig/build-ig.log'
+  name: $BRANCH
+ 
+cache:
+    paths:
+        - '/root/.m2/repository/**/*'  
