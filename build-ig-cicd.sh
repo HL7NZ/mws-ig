@@ -88,7 +88,7 @@ sudo chmod +x ./localscripts/makeTerminologySummary.js
 
 echo "Making API summary"
 sudo chmod +x ./localscripts/makeCapabilityStatement.js
-./localscripts/makeCapabilityStatement.js nes
+./localscripts/makeCapabilityStatement.js mws
 ./localscripts/makeProfilesAndExtensions.js
 pwd
 
