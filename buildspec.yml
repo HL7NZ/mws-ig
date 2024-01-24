@@ -67,9 +67,9 @@ phases:
       
 artifacts:
   files:
-    - 'nes-ig/output/full-ig.zip'
-    - 'nes-ig/target/*.zip'
-    - 'nes-ig/build-ig.log'
+    - 'mws-ig/output/full-ig.zip'
+    - 'mws-ig/target/*.zip'
+    - 'mws-ig/build-ig.log'
   name: $BRANCH
  
 cache:
