@@ -50,6 +50,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/enrolment-encounter"
+        },
+        "name": "Mws_verifier",
+        "description": "The practitioner that set the current verificationStatus",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/mws-allergyintolerance-clinical-1.0"
         },
         "name": "Mws Allergyintolerance clinical status",
