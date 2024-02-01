@@ -22,6 +22,15 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 //excluded
 
 * encounter 0..0 
+* type 0..0
+* code 0..0
+* lastOccurrence 0..0
+* reaction.description 0..0
+* reaction.onset 0..0
+* reaction.severity 0..0
+* reaction.exposureRoute 0..0
+* reaction.note 0..0
+
 
 
 
