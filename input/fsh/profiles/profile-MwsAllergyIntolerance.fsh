@@ -34,5 +34,6 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 //restrictions
 * clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
 
-
-
+//extensions 
+* extension contains
+    http://hl7.org.nz/fhir/StructureDefinition/mws-verifier  named Verifier 0..1 
