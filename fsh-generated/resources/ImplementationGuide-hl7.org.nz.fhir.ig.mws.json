@@ -47,13 +47,72 @@
         "name": "MwsAllergyIntolerance",
         "description": "Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/mws-allergyintolerance-clinical-1.0"
+        },
+        "name": "Mws Allergyintolerance clinical status",
+        "description": "NES Enrolment Status",
+        "exampleBoolean": false
       }
     ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
-      "page": []
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "API.html",
+          "title": "API",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "ComplianceTestingImportantInformation.html",
+          "title": "Compliance Testing Important Information",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "FAQ.html",
+          "title": "FAQ",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "general.html",
+          "title": "General",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "glossary.html",
+          "title": "Glossary",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "Onboarding.html",
+          "title": "Onboarding",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        }
+      ]
     },
     "parameter": [
       {

@@ -31,7 +31,8 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * reaction.exposureRoute 0..0
 * reaction.note 0..0
 
-
+//restrictions
+* clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
 
 
 
