@@ -33,7 +33,10 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 //restrictions
 * clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
+* onset[x] only dateTime
+* recorder only  Reference(PractitionerRole)
+* asserter only  Reference(Practitioner or Patient or PractitionerRole)
 
 //extensions 
 * extension contains
-    http://hl7.org.nz/fhir/StructureDefinition/mws-verifier  named Verifier 0..1 
+    http://hl7.org.nz/fhir/StructureDefinition/mws-verifier  named attester  0..1 

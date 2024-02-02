@@ -1024,18 +1024,6 @@
         "type": [
           {
             "code": "dateTime"
-          },
-          {
-            "code": "Age"
-          },
-          {
-            "code": "Period"
-          },
-          {
-            "code": "Range"
-          },
-          {
-            "code": "string"
           }
         ],
         "constraint": [
@@ -1124,10 +1112,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Practitioner",
-              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             ]
           }
         ],
@@ -1175,9 +1160,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient",
-              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
               "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
               "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
             ]
           }
@@ -1828,6 +1812,41 @@
         "id": "AllergyIntolerance.encounter",
         "path": "AllergyIntolerance.encounter",
         "max": "0"
+      },
+      {
+        "id": "AllergyIntolerance.onset[x]",
+        "path": "AllergyIntolerance.onset[x]",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.recorder",
+        "path": "AllergyIntolerance.recorder",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "AllergyIntolerance.asserter",
+        "path": "AllergyIntolerance.asserter",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole"
+            ]
+          }
+        ]
       },
       {
         "id": "AllergyIntolerance.lastOccurrence",
