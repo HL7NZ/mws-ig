@@ -413,10 +413,10 @@
         ]
       },
       {
-        "id": "AllergyIntolerance.extension:Verifier",
+        "id": "AllergyIntolerance.extension:attester",
         "path": "AllergyIntolerance.extension",
-        "sliceName": "Verifier",
-        "short": "Additional content defined by implementations",
+        "sliceName": "attester",
+        "short": "The practitioner that set the current verificationStatus",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
         "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
         "alias": [
@@ -434,7 +434,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/mws-verifier"
+              "http://hl7.org.nz/fhir/StructureDefinition/mws-attester"
             ]
           }
         ],
@@ -1142,8 +1142,8 @@
       {
         "id": "AllergyIntolerance.asserter",
         "path": "AllergyIntolerance.asserter",
-        "short": "Source of the information about the allergy",
-        "definition": "The source of the information about the allergy that is recorded.",
+        "short": "identifier of the person whio is teh source of information about t he allergy",
+        "definition": "If the authentication flow is Patient then the service must set the asserter to patient and the NHI number in the token must exist on NH. If the authentication flow is System then the facility(HPI-FacID) and practitioner(HPI-CPN) are required and must be valid ids in the HPI",
         "comment": "The recorder takes responsibility for the content, but can reference the source from where they got it.",
         "alias": [
           "Source",
@@ -1776,16 +1776,17 @@
         }
       },
       {
-        "id": "AllergyIntolerance.extension:Verifier",
+        "id": "AllergyIntolerance.extension:attester",
         "path": "AllergyIntolerance.extension",
-        "sliceName": "Verifier",
+        "sliceName": "attester",
+        "short": "The practitioner that set the current verificationStatus",
         "min": 0,
         "max": "1",
         "type": [
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org.nz/fhir/StructureDefinition/mws-verifier"
+              "http://hl7.org.nz/fhir/StructureDefinition/mws-attester"
             ]
           }
         ]
@@ -1837,6 +1838,8 @@
       {
         "id": "AllergyIntolerance.asserter",
         "path": "AllergyIntolerance.asserter",
+        "short": "identifier of the person whio is teh source of information about t he allergy",
+        "definition": "If the authentication flow is Patient then the service must set the asserter to patient and the NHI number in the token must exist on NH. If the authentication flow is System then the facility(HPI-FacID) and practitioner(HPI-CPN) are required and must be valid ids in the HPI",
         "type": [
           {
             "code": "Reference",

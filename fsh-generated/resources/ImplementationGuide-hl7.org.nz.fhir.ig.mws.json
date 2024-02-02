@@ -50,9 +50,9 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/enrolment-encounter"
+          "reference": "StructureDefinition/mws-attester"
         },
-        "name": "Mws_verifier",
+        "name": "Mws_attester",
         "description": "The practitioner that set the current verificationStatus",
         "exampleBoolean": false
       },

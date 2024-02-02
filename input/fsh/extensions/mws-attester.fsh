@@ -1,8 +1,8 @@
-Extension: Mws_verifier
-Id: enrolment-encounter
+Extension: Mws_attester
+Id: mws-attester
 Description: "The practitioner that set the current verificationStatus"
 
-* ^url = "http://hl7.org.nz/fhir/StructureDefinition/mws-verifier"
+* ^url = "http://hl7.org.nz/fhir/StructureDefinition/mws-attester"
 //* ^jurisdiction.coding = urn:iso:std:iso:3166#NZ
 * ^context.type = #element
 * ^context.expression = "MwsAllergyIntolerance"
