@@ -92,7 +92,8 @@ sudo chmod +x ./localscripts/makeCapabilityStatement.js
 ./localscripts/makeProfilesAndExtensions.js
 pwd
 
-echo running building openapi spec
+echo "building openapi spec"
+sudo chmod +x ./openapi/makeoas.sh
 ./openapi/makeoas.sh
 
 cp ./template/* $HOME/.fhir/packages/fhir.base.template#current/package/content
