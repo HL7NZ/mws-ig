@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance",
-  "version": "1.0.0",
+  "version": "1.0.0-SNAPSHOT",
   "name": "MwsAllergyIntolerance",
   "title": "MwsAllergyIntolerance",
   "status": "active",

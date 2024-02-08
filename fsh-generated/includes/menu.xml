@@ -90,6 +90,9 @@
       <li>
         <a href="definitions.xml.zip">Artifacts (Xml)</a>
       </li>
+      <li>
+        <a href="HipFhirMwsOpenApi.zip">OpenApi 3 spec</a>
+      </li>
     </ul>
   </li>
 </ul>
