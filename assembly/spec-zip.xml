@@ -1,39 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>nz.health.digital.com.fhir</groupId>
-	<artifactId>hip-aws-api-gw-oas</artifactId>
-	<version>${revision}</version>
+<assembly
+	xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+	<id>zip</id>
+	<includeBaseDirectory>false</includeBaseDirectory>
+
+	<formats>
+		<format>zip</format>
+	</formats>
+	<fileSets>
+		<fileSet>
+			<directory>${project.basedir}/output//</directory>
+			<includes>
+				<include>**/*.xml</include>
+			</includes>
+		</fileSet>
+	</fileSets>
 
 
-	<properties>
-		<revision>1.2.00</revision>
-		<!--<fhir-common.version>1.2.0</fhir-common.version> -->
-		<fhir-common.version>1.6.0-SNAPSHOT</fhir-common.version>
-		<nhi-ig-version>1.4.2</nhi-ig-version>
-		<hpi-ig-version>1.2.0</hpi-ig-version>
-	</properties>
-
-	<dependencies>
-		<dependency>
-			<groupId>health.identity.fhir</groupId>
-			<artifactId>hip-fhir-common</artifactId>
-			<version>${fhir-common.version}</version>
-			<classifier>fhir-resources</classifier>
-			<type>zip</type>
-		</dependency>
-
-
-		<dependency>
-			<groupId>nz.health.digital.nhi.fhir</groupId>
-			<artifactId>hip-nhi-conformance-module</artifactId>
-			<version>${nhi-ig-version}</version>
-			<classifier>zip</classifier>
-			<type>zip</type>
-		</dependency>
-
-		<dependency>
-			<groupId>nz.health.digital.hpi.fhir</groupId>
-			<artifactId>hip-hpi-conformance-module</artifactId>
-			<version>${hpi-ig-version}</version>
-			<type>zip</type>
-		</dependency>
+</assembly>
