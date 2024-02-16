@@ -50,6 +50,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mws-legacy-description"
+        },
+        "name": "Legacy_description",
+        "description": "Describes the allergy or intolerance in a format which can be consumed by SOAP and HL7 v2 APIs",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mws-attester"
         },
         "name": "Mws_attester",

@@ -11,8 +11,10 @@ Description: "The practitioner that set the current verificationStatus"
 
 * extension contains   
     attester 0..1 and   
-    verifiedDate 0..1 
+    verifiedDate 0..1  
+    
 
 * extension[attester].value[x] only Reference(PractitionerRole)
 * extension[verifiedDate].value[x] only dateTime
 * extension[verifiedDate].value[x] ^short = "the date the medical warning was verified"
+

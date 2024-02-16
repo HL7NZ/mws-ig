@@ -44,7 +44,8 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 //extensions 
 * extension contains
-    http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 
+    http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 and
+    http://hl7.org.nz/fhir/StructureDefinition/mws-legacy-description named legacyDescription 0..1  
 
     
 //documentation
