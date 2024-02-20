@@ -58,6 +58,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/mws-attested-date"
+        },
+        "name": "Mws_attestedDate",
+        "description": "The practitioner that set the current verificationStatus",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mws-attester"
         },
         "name": "Mws_attester",
