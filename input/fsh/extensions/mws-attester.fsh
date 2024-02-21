@@ -9,7 +9,7 @@ Description: "The practitioner that set the current verificationStatus"
 
 * ^status = #draft
 
-* extension.value[x] only Reference(PractitionerRole)
+* value[x] only Reference(PractitionerRole)
 
 
  
