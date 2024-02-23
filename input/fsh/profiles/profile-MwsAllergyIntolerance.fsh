@@ -38,7 +38,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
 * onset[x] only dateTime
 * recorder only  Reference(PractitionerRole or Patient) 
-* asserter only  Reference(Practitioner or Patient or PractitionerRole)
+* asserter only  Reference( PractitionerRole or Patient)
 * category 1..1
 * reaction 0..1
 
@@ -56,6 +56,6 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 // contained resources
 
 * contained 0..3
-* contained only PractitionerRole or Practitioner or  Patient 
+* contained only PractitionerRole  or  Patient 
 
 
