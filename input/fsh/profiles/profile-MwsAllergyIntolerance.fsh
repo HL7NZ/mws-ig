@@ -39,7 +39,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * onset[x] only dateTime
 * recorder only  Reference(PractitionerRole or Patient) 
 * asserter only  Reference( PractitionerRole or Patient)
-* category 1..1
+* category 0..1
 * reaction 0..1
 
 //extensions 
