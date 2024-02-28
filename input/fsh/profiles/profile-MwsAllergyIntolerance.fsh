@@ -23,10 +23,10 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 * encounter 0..0 
 * type 0..0
-* code 0..0
 * implicitRules 0..0
 * language 0..0
 * lastOccurrence 0..0
+* reaction.substance 0..0
 * reaction.description 0..0
 * reaction.onset 0..0
 * reaction.severity 0..0
