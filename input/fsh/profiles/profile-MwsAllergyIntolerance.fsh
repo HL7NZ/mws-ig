@@ -1,10 +1,11 @@
-
-
 //defined in NZ Base
 Alias: $suburb = http://hl7.org.nz/fhir/StructureDefinition/suburb
 Alias: $NZGeocode = http://hl7.org.nz/fhir/StructureDefinition/nz-geocode
 Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
+Alias: $snowmed-351000210106 = http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106
+Alias: $nzulm = https://nzhts.digital.health.nz/fhir/ValueSet/mws-nzulm-combined"
+
 
 
 Profile:        MwsAllergyIntolerance 
@@ -40,8 +41,10 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * recorder only  Reference(PractitionerRole or Patient) 
 * asserter only  Reference( PractitionerRole or Patient)
 * category 0..1
-* reaction 0..1
 
+* code from $nzulm
+* reaction 0..1
+* reaction.manifestation from $snowmed-351000210106
 //extensions 
 * extension contains
     http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 and
