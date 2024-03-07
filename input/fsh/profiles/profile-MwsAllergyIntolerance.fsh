@@ -5,6 +5,7 @@ Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
 Alias: $snowmed-351000210106 = http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106
 Alias: $nzulm = https://nzhts.digital.health.nz/fhir/ValueSet/mws-substance-combined
+Alias: $verificationStatus = https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status
 
 
 
@@ -36,13 +37,16 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 //restrictions
 //* meta.profile only http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance
-* clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
+* clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status
 * onset[x] only dateTime
 * recorder only  Reference(PractitionerRole or Patient) 
 * asserter only  Reference( PractitionerRole or Patient)
 * category 0..1
+* clinicalStatus 1..1
+* patient only Reference(MwsPatient)
 
 * code from $nzulm
+* verificationStatus from $verificationStatus
 * reaction 0..1
 * reaction.manifestation from $snowmed-351000210106
 //extensions 
@@ -58,7 +62,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 // contained resources
 
-* contained 0..3
+* contained 0..4
 * contained only PractitionerRole  or  Patient 
 
 

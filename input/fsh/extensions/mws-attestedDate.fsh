@@ -9,9 +9,7 @@ Description: "The practitioner that set the current verificationStatus"
 
 * ^status = #draft
 
-* extension contains   
-    attestedDate 0..1  
-
-* extension[attestedDate].value[x] only dateTime
+* extension 0..0
+* value[x] only date
 
 

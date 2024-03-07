@@ -333,7 +333,7 @@
           "contained resources"
         ],
         "min": 0,
-        "max": "3",
+        "max": "4",
         "base": {
           "path": "DomainResource.contained",
           "min": 0,
@@ -677,7 +677,7 @@
         "short": "active | inactive | resolved",
         "definition": "The clinical status of the allergy or intolerance.",
         "comment": "Refer to [discussion](extensibility.html#Special-Case) if clincalStatus is missing data.\nThe data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
-        "min": 0,
+        "min": 1,
         "max": "1",
         "base": {
           "path": "AllergyIntolerance.clinicalStatus",
@@ -708,7 +708,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
         },
         "mapping": [
           {
@@ -757,15 +757,8 @@
         "isModifierReason": "This element is labeled as a modifier because the status contains the codes refuted and entered-in-error that mark the AllergyIntolerance as not currently valid.",
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AllergyIntoleranceVerificationStatus"
-            }
-          ],
           "strength": "required",
-          "description": "Assertion about certainty associated with a propensity, or potential risk, of a reaction to the identified substance.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-verification|4.0.1"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status"
         },
         "mapping": [
           {
@@ -996,15 +989,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "AllergyIntoleranceCode"
-            }
-          ],
-          "strength": "example",
-          "description": "Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
+          "strength": "required",
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-substance-combined"
         },
         "mapping": [
           {
@@ -1040,7 +1026,7 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/StructureDefinition/Patient"
+              "http://hl7.org.nz/fhir/StructureDefinition/MwsPatient"
             ]
           }
         ],
@@ -1876,7 +1862,7 @@
       {
         "id": "AllergyIntolerance.contained",
         "path": "AllergyIntolerance.contained",
-        "max": "3",
+        "max": "4",
         "type": [
           {
             "code": "PractitionerRole"
@@ -1949,9 +1935,18 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
+        "min": 1,
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.verificationStatus",
+        "path": "AllergyIntolerance.verificationStatus",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status"
         }
       },
       {
@@ -1963,6 +1958,26 @@
         "id": "AllergyIntolerance.category",
         "path": "AllergyIntolerance.category",
         "max": "1"
+      },
+      {
+        "id": "AllergyIntolerance.code",
+        "path": "AllergyIntolerance.code",
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-substance-combined"
+        }
+      },
+      {
+        "id": "AllergyIntolerance.patient",
+        "path": "AllergyIntolerance.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org.nz/fhir/StructureDefinition/MwsPatient"
+            ]
+          }
+        ]
       },
       {
         "id": "AllergyIntolerance.encounter",
