@@ -43,6 +43,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * asserter only  Reference( PractitionerRole or Patient)
 * category 0..1
 * clinicalStatus 1..1
+* note 0..1
 * patient only Reference(MwsPatient)
 
 * code from $nzulm
@@ -52,7 +53,6 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 //extensions 
 * extension contains
     http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 and
-    http://hl7.org.nz/fhir/StructureDefinition/mws-legacy-description named legacyDescription 0..1  and
 	http://hl7.org.nz/fhir/StructureDefinition/mws-attested-date named attestedDate 0..1
     
 //documentation
