@@ -1,30 +1,37 @@
 
 
-### Get Enrolment by ID
+### Get AllergyIntolerance for Patient
 
-#### Overview
-
-The Get AllergyIntolerance operation allows an authorised user to retrieve an AllergyIntolerance  record for a Patient using a known AllergyIntolerance record id.
+This is typically used to get all AllergyIntolerances for a patient.
 
 <div>
-{% include get-AllergyIntolerance-by-id.svg %}
+{% include get-enrolment.svg %}
 </div>
 
 
 
-####  Get AllergyIntolerance by ID processing steps:
+####  Get Enrolment for Patient  processing steps:
 
-1. The user supplies an AllergyIntolerance-id to be looked up.
-2. The integrating application sends an HTTP GET request for the AllergyIntolerance record using the AllergyIntolerance-id. E.g. GET\<Endpoint>/AllergyIntolerance/[AllergyIntolerance-id]
-3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-4. The AllergyIntolerance record is retrieved from the MWS database - ALT: AllergyIntolerance Record not found. Operation Outcome resource returned<br />
-5. The response containing the AllergyIntolerance record is returned.
-
+1. A FHIR Client sends a GET request  to the NES  *AllergyIntolerance* endpoint with  the 'patient' query parameter specifying the patient's NHI number
+2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+3. AllergyIntolerances for  this NHI are retrieved from the NES database
+4. A bundle of MwsAllergyIntolerance resources is returned to the client
 
 
-####  Get AllergyIntolerance Response Example 
-[get-AllergyIntolerance-response](AllergyIntolerance-AI667788899.json.html)
+
+####  Search AllergyIntolerance Response Example 
+[get-enrolment-response-message-1](Bundle-AI123456.json.html)
 
 #### Business  Rules
-1.  A Get AllergyIntolerance request must include a valid AllergyIntolerance-id
+1.  An AllergyIntolerance search request must include a valid nhi-id
+
+
+### Search AllergyIntolerance for Patient
+This is typically used to find all AllergyIntolerances for a patient filtered by type or status. 
+
+
+<div>
+{% include search-AllergyIntolerance.svg %}
+</div>
+
 

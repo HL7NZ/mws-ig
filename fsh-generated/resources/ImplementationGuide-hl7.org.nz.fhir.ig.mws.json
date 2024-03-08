@@ -82,6 +82,14 @@
       },
       {
         "reference": {
+          "reference": "Bundle/AI123456"
+        },
+        "name": "MwsAllergyIntoleranceBundle-1",
+        "description": "Example MwsAllergyIntolerance search response",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
           "reference": "AllergyIntolerance/AI667788899"
         },
         "name": "MwsAllergyIntolerance-1",
@@ -133,6 +141,11 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "getAllergyIntolerance.html",
+          "title": "Get Allergy Intolerance",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "glossary.html",
           "title": "Glossary",
           "generation": "markdown"
@@ -146,6 +159,11 @@
           "nameUrl": "profiles.html",
           "title": "Profiles",
           "generation": "html"
+        },
+        {
+          "nameUrl": "searchAllergyIntolerance.html",
+          "title": "Search Allergy Intolerance",
+          "generation": "markdown"
         },
         {
           "nameUrl": "terminology.html",
