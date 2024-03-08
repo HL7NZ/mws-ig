@@ -50,10 +50,10 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/mws-legacy-description"
+          "reference": "StructureDefinition/MwsPatient"
         },
-        "name": "Legacy_description",
-        "description": "Describes the allergy or intolerance in a format which can be consumed by SOAP and HL7 v2 APIs",
+        "name": "Mws Patient",
+        "description": "A minimal profile of NzPatient, containing just enough information to validate a patient's NHI for the purposes of MWS",
         "exampleBoolean": false
       },
       {
@@ -79,6 +79,22 @@
         "name": "Mws Allergyintolerance clinical status",
         "description": "NES Enrolment Status",
         "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/AI667788899"
+        },
+        "name": "MwsAllergyIntolerance-1",
+        "description": "Example MwsAllergyIntolerance",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/MwsAllergyIntolerance-2"
+        },
+        "name": "MwsAllergyIntolerance-2",
+        "description": "Example MwsAllergyIntolerance Creeat request",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
       }
     ],
     "page": {

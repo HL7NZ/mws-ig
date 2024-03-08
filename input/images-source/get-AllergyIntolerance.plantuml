@@ -1,0 +1,18 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title  Search MwsAllergyIntolerance for patient
+participant "FHIR Client" as A #CornflowerBlue
+participant "MWS service" as B #CornflowerBlue
+participant "MWS database" as C #CornflowerBlue
+
+A -> B: GET [base]/MwsAllergyIntolerance?patient=ZAA0792
+B -> B: Validate
+B -> C: query
+C -[dashed]-> B:
+
+B -[dashed]-> A: MwsAllergyIntolerance Response 
+
+@enduml
