@@ -1,6 +1,6 @@
 
 
-### Get AllergyIntolerance by ID
+### Get Enrolment by ID
 
 #### Overview
 

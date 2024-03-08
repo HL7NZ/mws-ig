@@ -45,8 +45,8 @@ menu:
   IG Home: index.html
   Business View: businessView.html
   Use cases:
-    Get Enrolment: getAllergyIntolerance.html
-    Search Enrolments: searchAllergyIntolerance.html
+    Get AllergyIntolerance: getAllergyIntolerance.html
+    Search AllergyIntolerance: searchAllergyIntolerance.html
  
   Important information:
     Onboarding: Onboarding.html
