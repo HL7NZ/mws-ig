@@ -37,7 +37,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 //restrictions
 //* meta.profile only http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance
-* clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status
+* clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
 * onset[x] only dateTime
 * recorder only  Reference(PractitionerRole or Patient) 
 * asserter only  Reference( PractitionerRole or Patient)
