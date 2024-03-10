@@ -5,7 +5,7 @@
 This is typically used to get all AllergyIntolerances for a patient.
 
 <div>
-{% include get-enrolment.svg %}
+{% include search-AllergyIntolerance.svg %}
 </div>
 
 

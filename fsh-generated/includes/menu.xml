@@ -22,10 +22,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <a href="getAllergyIntolerance.html">Get Enrolment</a>
+        <a href="getAllergyIntolerance.html">Get AllergyIntolerance</a>
       </li>
       <li>
-        <a href="searchAllergyIntolerance.html">Search Enrolments</a>
+        <a href="searchAllergyIntolerance.html">Search AllergyIntolerance</a>
       </li>
     </ul>
   </li>
