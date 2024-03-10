@@ -27,7 +27,7 @@ Usage: #example
 * contained[2] = ZAC7658
 * contained[3] = Recorder2
 
-* clinicalStatus.coding.system = "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
+* clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * clinicalStatus.coding.code = #active
 
 * extension[attester].valueReference = Reference(Attester1)

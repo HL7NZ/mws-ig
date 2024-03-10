@@ -14,7 +14,7 @@ Usage: #example
 * category = #medication
 * criticality = #low
 
-* verificationStatus.coding.system = "https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status"
+* verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
 
@@ -29,9 +29,6 @@ Usage: #example
 * contained[1] = Attester1
 * contained[2] = ZJM9397
 * contained[3] = Recorder1
-
-* clinicalStatus.coding.system = "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
-* clinicalStatus.coding.code = #active
 
 * extension[attester].valueReference = Reference(Attester1)
 * extension[attestedDate].valueDate =  "2022-06-05"
