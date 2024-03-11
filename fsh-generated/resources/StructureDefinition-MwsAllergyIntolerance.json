@@ -655,7 +655,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
         },
         "mapping": [
           {
@@ -1870,7 +1870,7 @@
         "min": 1,
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical-status"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
         }
       },
       {

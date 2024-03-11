@@ -13,9 +13,9 @@ Usage: #example
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
 
-* patient = Reference(ZJM9397)
-* recorder = Reference(Recorder1)
-* asserter = Reference(Asserter1)
+* patient = Reference(ZAC7658)
+* recorder = Reference(Recorder2)
+* asserter = Reference(Asserter2)
 * reaction.manifestation.coding.system = "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
 * reaction.manifestation.coding.code = #128477000
 
@@ -30,7 +30,7 @@ Usage: #example
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * clinicalStatus.coding.code = #active
 
-* extension[attester].valueReference = Reference(Attester1)
+* extension[attester].valueReference = Reference(Attester2)
 * extension[attestedDate].valueDate =  "2022-06-05"
 
 
