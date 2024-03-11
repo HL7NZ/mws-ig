@@ -72,10 +72,12 @@ Usage: #inline
 * location.display = "Facility Has All Contact Types TEST"
 
 
-Instance: ZAC7658
+Instance: Patient2
 InstanceOf: MwsPatient
 Usage: #inline
 * name[0].family = "YAMAHA"
 * name[=].given[0] = "OLIVE"
 * birthDate = "2015-08-30"
+* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier.value = "ZAC7658"
 

@@ -18,7 +18,7 @@ Usage: #example
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
 
-* patient = Reference(ZJM9397)
+* patient = Reference(Patient1)
 * recorder = Reference(Recorder1)
 * asserter = Reference(Asserter1)
 
@@ -27,7 +27,7 @@ Usage: #example
 
 * contained[0] = Asserter1
 * contained[1] = Attester1
-* contained[2] = ZJM9397
+* contained[2] = Patient1
 * contained[3] = Recorder1
 
 * extension[attester].valueReference = Reference(Attester1)
@@ -72,11 +72,12 @@ Usage: #inline
 * location.display = "Facility Has All Contact Types TEST"
 
 
-Instance: ZJM9397
+Instance: Patient1 
 InstanceOf: MwsPatient
 Usage: #inline
 * name[0].family = "Ryan"
 * name[=].given[0] = "Jamie"
 * name[=].given[+] = "Joseph"
 * birthDate = "1972-06-05"
-
+* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
+* identifier.value = "ZJM9397"
