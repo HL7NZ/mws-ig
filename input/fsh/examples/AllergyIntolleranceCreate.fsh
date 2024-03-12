@@ -24,7 +24,7 @@ Usage: #example
 
 * contained[0] = Asserter2
 * contained[1] = Attester2
-* contained[2] = ZAC7658
+* contained[2] = Patient2
 * contained[3] = Recorder2
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"

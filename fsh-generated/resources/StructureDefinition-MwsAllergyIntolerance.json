@@ -1540,7 +1540,7 @@
           "Signs"
         ],
         "min": 1,
-        "max": "*",
+        "max": "50",
         "base": {
           "path": "AllergyIntolerance.reaction.manifestation",
           "min": 1,
@@ -1976,6 +1976,7 @@
       {
         "id": "AllergyIntolerance.reaction.manifestation",
         "path": "AllergyIntolerance.reaction.manifestation",
+        "max": "50",
         "binding": {
           "strength": "required",
           "valueSet": "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"

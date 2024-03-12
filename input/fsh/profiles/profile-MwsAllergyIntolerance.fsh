@@ -49,6 +49,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * code from $nzulm
 * verificationStatus from $verificationStatus
 * reaction 0..1
+* reaction.manifestation 1..50
 * reaction.manifestation from $snowmed-351000210106
 //extensions 
 * extension contains
