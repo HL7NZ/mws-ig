@@ -110,7 +110,7 @@ if (fs.existsSync(rootPath)) {
                           	ar.push(`<td>${verb}</td>`)
 							ar.push(`<td>${url}</td>`)
                             ar.push(`<td>${doc}</td>`)
-                            ar.push(`<td>${scope}</td>`)
+                             ar.push(`<td>${scope}</td>`)
                             ar.push("</tr>")
     
                         })
@@ -174,36 +174,32 @@ if (fs.existsSync(rootPath)) {
 
             })
 
-			
-			ar.push('<br/><h4>' + "Server Level Interactions" + "</h4>") 
-			ar.push("<strong>Operations</strong>")
-			ar.push("<table class='table table-bordered table-condensed'>")
-		    ar.push("<tr><th width='10%'>Name</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th><th width='10%'>Scope</th></tr>")
-			capStmt.rest.forEach(function(rest){				
-				rest.operation.forEach(function(ser){
-					  ar.push(`<a name="${ser.name}"> </a>`)   
-                      
-				 
-					ar.push("<tr>")
-					ar.push(`<td>${ser.name}</td>`)
-					//let documentation = cleanText(ser.documentation) || hashInteraction[ser.code]
-					let documentation = ser.documentation.split(',')
-					let verb  = documentation[0] ?? " "
-					let url = documentation[1] ?? " "
-					let doc = documentation[2] ?? " "
-					let scope = documentation[3] ?? " "
-					ar.push(`<td>${verb}</td>`)
-					ar.push(`<td>${url}</td>`)
-					ar.push(`<td>${doc}</td>`)
-					ar.push(`<td>${scope}</td>`)
-					ar.push("</tr>")
-
+			if (capStmt.rest.operation) {	
 				
-				})
-           
-			})
-			ar.push("</table>")
+				ar.push("<br/><h4>Server Level Interactions</h4>") 
+				ar.push("<strong>Operations</strong>")
+				ar.push("<table class='table table-bordered table-condensed'>")
+				ar.push("<tr><th width='30%'>Name</th><th width='70%'>Definitions</th></tr>")
+                      
+				capStmt.rest.forEach(function(rest){	
 			
+					rest.operation.forEach(function(ser){
+				 
+                        let name = cleanText(ser.name) || "" 
+                        ar.push("<tr>")                       
+                        ar.push(`<td>${name}</td>`)
+                        //ar.push("<br></br>")
+                        let def = cleanText(ser.definition) || ""                        
+                        ar.push(`<td>${def}</td>`)
+                        ar.push("<br></br>")
+                        ar.push("</tr>")
+                    
+					})
+				
+           
+				})
+				ar.push("</table>")
+			}
 
             if (capStmt.messaging) {	
 				ar.push("<br/><h3>Messages</h3>")
@@ -228,11 +224,6 @@ if (fs.existsSync(rootPath)) {
 				})
 				ar.push("</table>")
 			}
-			
-			
-			
-                      
-			
         }
 
 
