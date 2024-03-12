@@ -40,4 +40,143 @@
       - hip-fhir-cog:
         - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.r"
       - api_key: []
- 
+   
+    put:
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "mwsid"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MwsAllergyIntolerance"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "200":
+          description: "200 response"
+          content: {}
+      security:
+      - hip-fhir-cog:
+        - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.u"
+      - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNes  
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
+
+  /fhir/mws/v1/AllergyIntolerance:
+  
+    get:
+        parameters:
+        - name: "patient"
+          in: "query"
+          schema:
+            type: "string"
+      
+        responses:
+          "400":
+            description: "400 response"
+            content: {}
+          "200":
+            description: "200 response"
+            content: {}
+        security:
+        - hip-fhir-cog:
+          - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.s"
+          - "patient:Coverage.s"
+        - api_key: []
+        
+        x-amazon-apigateway-request-validator: params-only
+                # API gateway Integration type and section
+        x-amazon-apigateway-integration:
+                  # type of Lambda Integration - NOTE: when using aws_proxy the responses below are not in use - responses are passed from lambda through
+                  type: "aws_proxy"
+                  httpMethod: "POST"
+                  uri: 
+                    Ref: pLambdaNameNes  
+                  passthroughBehavior: "when_no_match"
+                  # standard 29 second timeout value
+                  timeoutInMillis: 29000
+                
+    post:
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MwsAllergyIntolerance"
+        required: true
+      responses:
+        "422":
+          description: "422 response"
+          content: {}
+        "204":
+          description: "204 response"
+          headers:
+            Content-Location:
+              schema:
+                type: "string"
+          content: {}
+      security:
+      - hip-fhir-cog:
+        - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.c"
+      - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+              # API gateway Integration type and section
+      x-amazon-apigateway-integration:
+                # type of Lambda Integration - NOTE: when using aws_proxy the responses below are not in use - responses are passed from lambda through
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNes  
+                passthroughBehavior: "when_no_match"
+                # standard 29 second timeout value
+                timeoutInMillis: 29000
