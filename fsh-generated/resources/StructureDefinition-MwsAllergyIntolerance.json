@@ -124,6 +124,55 @@
             "expression": "text.`div`.exists()",
             "xpath": "exists(f:text/h:div)",
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
+          },
+          {
+            "key": "URL-LENGTH",
+            "severity": "error",
+            "human": "URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().url.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "URL-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for URLs",
+            "expression": "AllergyIntolerance.descendants().url.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "SYSTEM-LENGTH",
+            "severity": "error",
+            "human": "System URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().system.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "SYSTEM-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for system url",
+            "expression": "AllergyIntolerance.descendants().system.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "CODEABLE-CONCEPT-TEXT-LENGTH",
+            "severity": "error",
+            "human": "valueCodeableConcept.text must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for valueCodeableConcept.text",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "NOTE-LENGTH",
+            "severity": "error",
+            "human": "System URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.note.text.all(length()<1024",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ],
         "isModifier": false,
@@ -1681,6 +1730,61 @@
   },
   "differential": {
     "element": [
+      {
+        "id": "AllergyIntolerance",
+        "path": "AllergyIntolerance",
+        "constraint": [
+          {
+            "key": "URL-LENGTH",
+            "severity": "error",
+            "human": "URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().url.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "URL-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for URLs",
+            "expression": "AllergyIntolerance.descendants().url.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "SYSTEM-LENGTH",
+            "severity": "error",
+            "human": "System URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().system.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "SYSTEM-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for system url",
+            "expression": "AllergyIntolerance.descendants().system.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "CODEABLE-CONCEPT-TEXT-LENGTH",
+            "severity": "error",
+            "human": "valueCodeableConcept.text must be less than 1024 characters",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for valueCodeableConcept.text",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "NOTE-LENGTH",
+            "severity": "error",
+            "human": "System URLs must be less than 1024 characters",
+            "expression": "AllergyIntolerance.note.text.all(length()<1024",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          }
+        ]
+      },
       {
         "id": "AllergyIntolerance.implicitRules",
         "path": "AllergyIntolerance.implicitRules",

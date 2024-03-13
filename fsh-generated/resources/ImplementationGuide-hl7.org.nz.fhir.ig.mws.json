@@ -82,6 +82,14 @@
       },
       {
         "reference": {
+          "reference": "AllergyIntolerance/A1122112211"
+        },
+        "name": "MwsAllergyIntolerance-3",
+        "description": "Example MwsAllergyIntolerance",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
           "reference": "Bundle/AI123456"
         },
         "name": "MwsAllergyIntoleranceBundle-1",

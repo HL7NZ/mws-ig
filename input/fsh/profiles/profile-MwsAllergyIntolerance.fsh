@@ -68,4 +68,53 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * contained 0..2
 * contained only PractitionerRole  or  Patient 
 
+* obeys URL-LENGTH
+* obeys URL-ALLOWED-CHARS
+* obeys SYSTEM-LENGTH
+* obeys SYSTEM-ALLOWED-CHARS
+* obeys CODEABLE-CONCEPT-TEXT-LENGTH
+* obeys CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS
+* obeys NOTE-LENGTH
 
+
+//to do: allow unicocde
+Invariant: URL-LENGTH
+Expression: "AllergyIntolerance.descendants().url.all(length()<1024)"
+Description: "URLs must be less than 1024 characters"
+Severity: #error
+
+Invariant: URL-ALLOWED-CHARS
+Expression: "AllergyIntolerance.descendants().url.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))"
+Description: "character restrictions for URLs"
+Severity: #error
+
+Invariant: SYSTEM-LENGTH
+Expression: "AllergyIntolerance.descendants().system.all(length()<1024)"
+Description: "System URLs must be less than 1024 characters"
+Severity: #error
+
+Invariant: SYSTEM-ALLOWED-CHARS
+Expression: "AllergyIntolerance.descendants().system.all(matches('^[-a-zA-Z0-9@:%._~#=?&\\/]*$'))"
+Description: "character restrictions for system url"
+Severity: #error
+
+Invariant: CODEABLE-CONCEPT-TEXT-LENGTH
+Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(length()<1024)"
+Description: "valueCodeableConcept.text must be less than 1024 characters"
+Severity: #error
+
+Invariant: CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS
+Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))"
+Description: "character restrictions for valueCodeableConcept.text"
+Severity: #error
+
+Invariant: NOTE-LENGTH
+Expression: "AllergyIntolerance.note.text.all(length()<1024"
+Description: "System URLs must be less than 1024 characters"
+Severity: #error
+
+
+Invariant: NOTE-ALLOWED-CHARS
+Expression: "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))"
+Description: "character restrictions for system url"
+Severity: #error

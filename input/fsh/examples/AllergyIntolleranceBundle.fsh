@@ -22,6 +22,7 @@ Usage: #example
 
 * entry[0].resource.onsetDateTime = "2023"
 
+* entry[0].resource.note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces"
 
 * entry[0].resource.contained[0] = Patient3
 * entry[0].resource.contained[1] = Recorder3
