@@ -27,9 +27,6 @@ Usage: #example
 * contained[0] = Patient1
 * contained[1] = Recorder1
 
-* extension[attester].valueReference = Reference(Attester1)
-* extension[attestedDate].valueDate =  "2022-06-05"
-
 
 Instance: Recorder1
 InstanceOf: PractitionerRole

@@ -27,9 +27,6 @@ Usage: #example
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * clinicalStatus.coding.code = #active
 
-* extension[attester].valueReference = Reference(Attester2)
-* extension[attestedDate].valueDate =  "2022-06-05"
-
 
 Instance: Recorder2
 InstanceOf: PractitionerRole

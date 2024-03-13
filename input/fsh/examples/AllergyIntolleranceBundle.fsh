@@ -29,10 +29,7 @@ Usage: #example
 * entry[0].resource.clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * entry[0].resource.clinicalStatus.coding.code = #active
 
-* entry[0].resource.extension[0].valueReference = Reference(Attester3)
-* entry[0].resource.extension[0].url = "http://hl7.org.nz/fhir/StructureDefinition/mws-attester"
-* entry[0].resource.extension[1].url = "http://hl7.org.nz/fhir/StructureDefinition/mws-attested-date"
-* entry[0].resource.extension[1].valueDate =  "2022-06-05"
+
 
 
 Instance: Recorder3

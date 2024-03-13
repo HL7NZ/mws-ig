@@ -54,14 +54,14 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * reaction.manifestation 1..50
 * reaction.manifestation from $snowmed-351000210106
 //extensions 
-* extension contains
-    http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 and
-	http://hl7.org.nz/fhir/StructureDefinition/mws-attested-date named attestedDate 0..1
+//* extension contains
+//    http://hl7.org.nz/fhir/StructureDefinition/mws-attester  named attester  0..1 and
+//    http://hl7.org.nz/fhir/StructureDefinition/mws-attested-date named attestedDate 0..1
     
 //documentation
-* extension[attester] ^short =  "The practitioner that set the current verificationStatus"
-* asserter ^short = "identifier of the person who is the source of information about the allergy"
-* asserter ^definition = "If the authentication flow is Patient then the service must set the asserter to patient and the NHI number in the token must exist on NH. If the authentication flow is System then the facility(HPI-FacID) and practitioner(HPI-CPN) are required and must be valid ids in the HPI"
+//* extension[attester] ^short =  "The practitioner that set the current verificationStatus"
+//* asserter ^short = "identifier of the person who is the source of information about the allergy"
+//* asserter ^definition = "If the authentication flow is Patient then the service must set the asserter to patient and the NHI number in the token must exist on NH. If the authentication flow is System then the facility(HPI-FacID) and practitioner(HPI-CPN) are required and must be valid ids in the HPI"
 
 // contained resources
 
