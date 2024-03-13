@@ -12,7 +12,6 @@ Usage: #example
 * entry[0].resource.clinicalStatus.coding.code = #active
 
 * entry[0].resource.category = #medication
-* entry[0].resource.criticality = #low
 
 * entry[0].resource.verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * entry[0].resource.verificationStatus.coding.code  = #refuted
@@ -20,15 +19,12 @@ Usage: #example
 
 * entry[0].resource.patient = Reference(Patient3)
 * entry[0].resource.recorder = Reference(Recorder3)
-* entry[0].resource.asserter = Reference(Asserter3)
 
 * entry[0].resource.onsetDateTime = "2023"
 
 
-* entry[0].resource.contained[0] = Asserter3
-* entry[0].resource.contained[1] = Attester3
-* entry[0].resource.contained[2] = Patient3
-* entry[0].resource.contained[3] = Recorder3
+* entry[0].resource.contained[0] = Patient3
+* entry[0].resource.contained[1] = Recorder3
 
 * entry[0].resource.clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * entry[0].resource.clinicalStatus.coding.code = #active
@@ -51,30 +47,6 @@ Usage: #inline
 * location = Reference(Location/FZZ968-B)
 * location.display = "Facility Has All Contact Types TEST"
 
-Instance: Attester3
-InstanceOf: PractitionerRole
-Description: "Example Attester3"
-Usage: #inline
-
-* practitioner = Reference(Practitioner/99ZZZS)
-* practitioner.display = "Mrs TestOne Prefix-Test"
-* organization = Reference(Organization/GZZ998-G)
-* organization.display = "Live Org with Dormant"
-* location = Reference(Location/FZZ968-B)
-* location.display = "Facility Has All Contact Types TEST"
-
-
-Instance: Asserter3
-InstanceOf: PractitionerRole
-Description: "Example Asserter3"
-Usage: #inline
-
-* practitioner = Reference(Practitioner/99ZZZS)
-* practitioner.display = "Mrs TestOne Prefix-Test"
-* organization = Reference(Organization/GZZ998-G)
-* organization.display = "Live Org with Dormant"
-* location = Reference(Location/FZZ968-B)
-* location.display = "Facility Has All Contact Types TEST"
 
 
 Instance: Patient3

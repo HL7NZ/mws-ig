@@ -12,7 +12,6 @@ Usage: #example
 * clinicalStatus.coding.code = #active
 
 * category = #medication
-* criticality = #low
 
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * verificationStatus.coding.code  = #refuted
@@ -20,15 +19,13 @@ Usage: #example
 
 * patient = Reference(Patient1)
 * recorder = Reference(Recorder1)
-* asserter = Reference(Asserter1)
 
 * onsetDateTime = "2023"
 
 
-* contained[0] = Asserter1
-* contained[1] = Attester1
-* contained[2] = Patient1
-* contained[3] = Recorder1
+
+* contained[0] = Patient1
+* contained[1] = Recorder1
 
 * extension[attester].valueReference = Reference(Attester1)
 * extension[attestedDate].valueDate =  "2022-06-05"
@@ -37,31 +34,6 @@ Usage: #example
 Instance: Recorder1
 InstanceOf: PractitionerRole
 Description: "Example Recorder1"
-Usage: #inline
-
-* practitioner = Reference(Practitioner/99ZZZS)
-* practitioner.display = "Mrs TestOne Prefix-Test"
-* organization = Reference(Organization/GZZ998-G)
-* organization.display = "Live Org with Dormant"
-* location = Reference(Location/FZZ968-B)
-* location.display = "Facility Has All Contact Types TEST"
-
-Instance: Attester1
-InstanceOf: PractitionerRole
-Description: "Example Attester1"
-Usage: #inline
-
-* practitioner = Reference(Practitioner/99ZZZS)
-* practitioner.display = "Mrs TestOne Prefix-Test"
-* organization = Reference(Organization/GZZ998-G)
-* organization.display = "Live Org with Dormant"
-* location = Reference(Location/FZZ968-B)
-* location.display = "Facility Has All Contact Types TEST"
-
-
-Instance: Asserter1
-InstanceOf: PractitionerRole
-Description: "Example Asserter1"
 Usage: #inline
 
 * practitioner = Reference(Practitioner/99ZZZS)

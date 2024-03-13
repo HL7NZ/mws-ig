@@ -34,13 +34,15 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * reaction.severity 0..0
 * reaction.exposureRoute 0..0
 * reaction.note 0..0
+* criticality 0..0
+* asserter 0..0
 
 //restrictions
 //* meta.profile only http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance
 * clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
 * onset[x] only dateTime
-* recorder only  Reference(PractitionerRole or Patient) 
-* asserter only  Reference( PractitionerRole or Patient)
+* recorder only  Reference(PractitionerRole) 
+
 * category 0..1
 * clinicalStatus 1..1
 * note 0..1
@@ -63,7 +65,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 // contained resources
 
-* contained 0..4
+* contained 0..2
 * contained only PractitionerRole  or  Patient 
 
 
