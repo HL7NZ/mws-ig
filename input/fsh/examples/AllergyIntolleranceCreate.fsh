@@ -1,6 +1,6 @@
 Instance: MwsAllergyIntolerance-2
 InstanceOf: MwsAllergyIntolerance
-Description: "Example MwsAllergyIntolerance Creeat request"
+Description: "Example MwsAllergyIntolerance Create request"
 Usage: #example
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
