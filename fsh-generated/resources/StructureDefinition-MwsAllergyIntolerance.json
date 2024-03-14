@@ -171,7 +171,7 @@
             "key": "NOTE-LENGTH",
             "severity": "error",
             "human": "System URLs must be less than 1024 characters",
-            "expression": "AllergyIntolerance.note.text.all(length()<1024",
+            "expression": "AllergyIntolerance.note.text.all(length()<1024)",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ],
@@ -1780,7 +1780,7 @@
             "key": "NOTE-LENGTH",
             "severity": "error",
             "human": "System URLs must be less than 1024 characters",
-            "expression": "AllergyIntolerance.note.text.all(length()<1024",
+            "expression": "AllergyIntolerance.note.text.all(length()<1024)",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ]

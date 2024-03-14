@@ -82,14 +82,6 @@
       },
       {
         "reference": {
-          "reference": "AllergyIntolerance/A1122112211"
-        },
-        "name": "MwsAllergyIntolerance-3",
-        "description": "Example MwsAllergyIntolerance",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
-      },
-      {
-        "reference": {
           "reference": "Bundle/AI123456"
         },
         "name": "MwsAllergyIntoleranceBundle-1",
@@ -116,7 +108,15 @@
           "reference": "AllergyIntolerance/MwsAllergyIntolerance-2"
         },
         "name": "MwsAllergyIntolerance-2",
-        "description": "Example MwsAllergyIntolerance Creeat request",
+        "description": "Example MwsAllergyIntolerance Create request",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/MwsAllergyIntolerance-3"
+        },
+        "name": "MwsAllergyIntolerance-3",
+        "description": "Example MwsAllergyIntolerance, where the recorder does not have a CPN",
         "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
       }
     ],
@@ -136,8 +136,18 @@
           "generation": "html"
         },
         {
+          "nameUrl": "businessView.html",
+          "title": "Business View",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "ComplianceTestingImportantInformation.html",
           "title": "Compliance Testing Important Information",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "createAllergyIntolerance.html",
+          "title": "Create Allergy Intolerance",
           "generation": "markdown"
         },
         {

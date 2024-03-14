@@ -109,7 +109,7 @@ Description: "character restrictions for valueCodeableConcept.text"
 Severity: #error
 
 Invariant: NOTE-LENGTH
-Expression: "AllergyIntolerance.note.text.all(length()<1024"
+Expression: "AllergyIntolerance.note.text.all(length()<1024)"
 Description: "System URLs must be less than 1024 characters"
 Severity: #error
 

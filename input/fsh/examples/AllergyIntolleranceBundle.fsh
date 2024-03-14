@@ -31,6 +31,9 @@ Usage: #example
 * entry[0].resource.clinicalStatus.coding.code = #active
 
 
+* entry[0].resource.code.coding.system = "http://nzmt.org.nz"
+* entry[0].resource.code.coding.code = #44781901000116100
+* entry[0].resource.code.coding.display = "olodaterol"
 
 
 Instance: Recorder3

@@ -1,12 +1,8 @@
 Instance: MwsAllergyIntolerance-3
 InstanceOf: MwsAllergyIntolerance
-Description: "Example MwsAllergyIntolerance"
+Description: "Example MwsAllergyIntolerance, where the recorder does not have a CPN"
 Usage: #example
 
-* id = "A1122112211"
-
-* identifier.system = "https://standards.digital.health.nz/ns/mws-id"
-* identifier.value = "AI667788899"
 
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * clinicalStatus.coding.code = #active
@@ -24,6 +20,9 @@ Usage: #example
 * onsetDateTime = "2023"
 * note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces"
 
+* code.coding.system = "http://nzmt.org.nz"
+* code.coding.code = #10758391000116108 
+* code.coding.display = "thioridazine hydrochloride"
 
 * contained[0] = Patient4
 

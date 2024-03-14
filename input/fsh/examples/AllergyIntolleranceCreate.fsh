@@ -27,6 +27,9 @@ Usage: #example
 * clinicalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
 * clinicalStatus.coding.code = #active
 
+* code.coding.system = "http://nzmt.org.nz"
+* code.coding.code = #46125321000116100 
+* code.coding.display = "cyproterone + ethinylestradiol"
 
 Instance: Recorder2
 InstanceOf: PractitionerRole

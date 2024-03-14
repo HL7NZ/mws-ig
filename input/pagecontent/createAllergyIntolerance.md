@@ -19,10 +19,36 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 4. A newly created  MwsAllergyIntolerance, including its ID,  is returned to the client
 
 
-####  Create AllergyIntolerance Request Example 
-[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance-2.json.html)
+####  Create AllergyIntolerance Request Examples
 
+##### Recorder CPN is known
 
+This is an example of a create request in which the recroder's CPN is known:
+[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance.json.html)
+
+The recorder is provided as a reference to a contained practitioner role
+```
+"recorder": {
+
+    "reference": "#Recorder2"
+  }
+```
+
+##### Recorder CPN is not known
+
+This is an example of a create request in which the recroder's CPN is not known:
+[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance-3.json.html)
+The recorder is given as a logical  reference using the local identifier and namespace
+
+```
+"recorder": {
+
+    "identifier": {
+      "value": "my-local-practionerid-1234",
+      "system": "http://my-local-practioner-namespace.co.nz"
+    }
+  }
+```
 
 #### Behaviour
 
@@ -33,7 +59,7 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 * The request is checked  to make sure the changes requested complies with the relevant AllergyIntolerance Business and Attribute Rules.
 * If all the attributes / items in the AllergyIntolerance record are correct
   * A new AllergyIntolerance record is created in MWS with the details populated in the request.
- 
+
 
 #### Business  Rules
 

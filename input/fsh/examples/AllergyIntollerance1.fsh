@@ -16,7 +16,12 @@ Usage: #example
 * verificationStatus.coding.system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
+
 * note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces"
+
+* code.coding.system = "http://nzmt.org.nz"
+* code.coding.code = #46043541000116107 
+* code.coding.display = "A/California/7/2009 (H1N1) - like strain (NYMC X-181) + A/Switzerland/9715293/2013 (H3N2) - like strain (A/Switzerland/9715293/2013 NIB-88) + B/Phuket/3073/2013 - like strain (B/Phuket/3073/2013)"
 
 * patient = Reference(Patient1)
 * recorder = Reference(Recorder1)
