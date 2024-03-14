@@ -75,6 +75,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * obeys CODEABLE-CONCEPT-TEXT-LENGTH
 * obeys CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS
 * obeys NOTE-LENGTH
+* obeys NOTE-ALLOWED-CHARS
 
 
 //to do: allow unicocde

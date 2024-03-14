@@ -173,6 +173,13 @@
             "human": "System URLs must be less than 1024 characters",
             "expression": "AllergyIntolerance.note.text.all(length()<1024)",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "NOTE-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for system url",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ],
         "isModifier": false,
@@ -1781,6 +1788,13 @@
             "severity": "error",
             "human": "System URLs must be less than 1024 characters",
             "expression": "AllergyIntolerance.note.text.all(length()<1024)",
+            "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+          },
+          {
+            "key": "NOTE-ALLOWED-CHARS",
+            "severity": "error",
+            "human": "character restrictions for system url",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ]
