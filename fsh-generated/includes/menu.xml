@@ -27,9 +27,6 @@
       <li>
         <a href="searchAllergyIntolerance.html">Search AllergyIntolerance</a>
       </li>
-      <li>
-        <a href="createAllergyIntolerance.html">Create</a>
-      </li>
     </ul>
   </li>
   <li class="dropdown">

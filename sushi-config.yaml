@@ -48,6 +48,7 @@ menu:
   Use cases:
     Get AllergyIntolerance: getAllergyIntolerance.html
     Search AllergyIntolerance: searchAllergyIntolerance.html
+    Create : createAllergyIntolerance.html
  
   Important information:
     Onboarding: Onboarding.html
