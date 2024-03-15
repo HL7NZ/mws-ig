@@ -105,7 +105,7 @@ Description: "valueCodeableConcept.text must be less than 1024 characters"
 Severity: #error
 
 Invariant: CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS
-Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))"
+Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))"
 Description: "character restrictions for valueCodeableConcept.text"
 Severity: #error
 
@@ -116,6 +116,6 @@ Severity: #error
 
 
 Invariant: NOTE-ALLOWED-CHARS
-Expression: "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\'\\s\\.\\-\\/,])*$'))"
+Expression: "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))"
 Description: "character restrictions for system url"
 Severity: #error

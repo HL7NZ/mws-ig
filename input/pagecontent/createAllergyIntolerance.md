@@ -26,12 +26,13 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 This is an example of a create request in which the recroder's CPN is known:
 [create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance.json.html)
 
-The recorder is provided as a reference to a contained practitioner role
-```
-"recorder": {
+The recorder is provided as a relative literal reference to an HPIPractitioner 
 
-    "reference": "#Recorder2"
-  }
+```
+ "practitioner": {
+        "reference": "Practitioner/99ZZZS",
+        "display": "Mrs TestOne Prefix-Test"
+      }
 ```
 
 ##### Recorder CPN is not known
@@ -41,13 +42,13 @@ This is an example of a create request in which the recroder's CPN is not known:
 The recorder is given as a logical  reference using the local identifier and namespace
 
 ```
-"recorder": {
-
-    "identifier": {
-      "value": "my-local-practionerid-1234",
-      "system": "http://my-local-practioner-namespace.co.nz"
-    }
-  }
+ "practitioner": {
+        "identifier": {
+          "value": "my-local-practionerid-1234",
+          "system": "http://my-local-practioner-namespace.co.nz"
+        },
+        "display": "Mrs TestOne Prefix-Test"
+      }
 ```
 
 #### Behaviour
@@ -58,7 +59,7 @@ The recorder is given as a logical  reference using the local identifier and nam
 * The patient identity is validated.
 * The request is checked  to make sure the changes requested complies with the relevant AllergyIntolerance Business and Attribute Rules.
 * If all the attributes / items in the AllergyIntolerance record are correct
-  * A new AllergyIntolerance record is created in MWS with the details populated in the request.
+* A new AllergyIntolerance record is created in MWS with the details populated in the request.
 
 
 #### Business  Rules

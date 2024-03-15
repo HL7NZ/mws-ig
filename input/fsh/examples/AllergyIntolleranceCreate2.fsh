@@ -13,9 +13,8 @@ Usage: #example
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
 
-* patient = Reference(Patient2)
-* recorder.identifier.value = "my-local-practionerid-1234"
-* recorder.identifier.system = "http://my-local-practioner-namespace.co.nz"
+* patient = Reference(Patient4)
+* recorder =  Reference(Recorder4)
 
 * onsetDateTime = "2023"
 * note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces"
@@ -25,6 +24,7 @@ Usage: #example
 * code.coding.display = "thioridazine hydrochloride"
 
 * contained[0] = Patient4
+* contained[1] = Recorder4
 
 Instance: Patient4
 InstanceOf: MwsPatient
@@ -35,3 +35,18 @@ Usage: #inline
 * birthDate = "1972-06-05"
 * identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
 * identifier.value = "ZJM9397"
+
+Instance: Recorder4
+InstanceOf: PractitionerRole
+Description: "Example Recorder4 - recorder does not have a CPN"
+Usage: #inline
+
+//logical reference for practitioner with no known CPN
+* practitioner.identifier.value = "my-local-practionerid-1234"
+* practitioner.identifier.system = "http://my-local-practioner-namespace.co.nz"
+
+* practitioner.display = "Mrs TestOne Prefix-Test"
+* organization = Reference(Organization/GZZ998-G)
+* organization.display = "Live Org with Dormant"
+* location = Reference(Location/FZZ968-B)
+* location.display = "Facility Has All Contact Types TEST"
