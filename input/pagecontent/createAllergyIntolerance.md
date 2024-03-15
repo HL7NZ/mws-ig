@@ -38,7 +38,7 @@ The recorder is provided as a relative literal reference to an HPIPractitioner
 ##### Recorder CPN is not known
 
 This is an example of a create request in which the recroder's CPN is not known:
-[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance-3.json.html)
+[create AllergyIntolerance request - unknown CPN](AllergyIntolerance-MwsAllergyIntolerance-3.json.html)
 The recorder is given as a logical  reference using the local identifier and namespace
 
 ```
