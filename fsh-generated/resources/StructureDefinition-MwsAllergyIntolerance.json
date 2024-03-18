@@ -164,7 +164,7 @@
             "key": "CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS",
             "severity": "error",
             "human": "character restrictions for valueCodeableConcept.text",
-            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           },
           {
@@ -178,7 +178,7 @@
             "key": "NOTE-ALLOWED-CHARS",
             "severity": "error",
             "human": "character restrictions for system url",
-            "expression": "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ],
@@ -1780,7 +1780,7 @@
             "key": "CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS",
             "severity": "error",
             "human": "character restrictions for valueCodeableConcept.text",
-            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))",
+            "expression": "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           },
           {
@@ -1794,7 +1794,7 @@
             "key": "NOTE-ALLOWED-CHARS",
             "severity": "error",
             "human": "character restrictions for system url",
-            "expression": "AllergyIntolerance.note.text.all(matches('^([a-zA-Z0-9\\' \\t\\r\\n\\.\\-\\/,])*$'))",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ]

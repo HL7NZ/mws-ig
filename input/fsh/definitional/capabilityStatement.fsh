@@ -36,5 +36,9 @@ Usage: #definition
 * rest.resource[=].searchParam[0].type = #string
 * rest.resource[=].searchParam[0].documentation = "NHI-Id"
 
+* rest.resource[=].searchParam[1].name = "category"
+* rest.resource[=].searchParam[1].type = #token
+* rest.resource[=].searchParam[1].documentation = "food, medication, environment or biologic"
+
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[=].documentation = "PUT,[base]/AllergyIntolerance/[id], update an existing AllergyIntolerance, system/AllergyIntolerance.u"
