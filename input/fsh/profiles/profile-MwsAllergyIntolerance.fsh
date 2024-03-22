@@ -44,7 +44,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 * recorder only  Reference(PractitionerRole) 
 
 * category 0..1
-* clinicalStatus 1..1
+* clinicalStatus 0..1
 * note 0..1
 * patient only Reference(MwsPatient)
 
