@@ -42,3 +42,7 @@ Usage: #definition
 
 * rest.resource[=].interaction[+].code = #update
 * rest.resource[=].interaction[=].documentation = "PUT,[base]/AllergyIntolerance/[id], update an existing AllergyIntolerance, system/AllergyIntolerance.u"
+
+
+* rest.resource[=].interaction[+].code = #delete
+* rest.resource[=].interaction[=].documentation = "DELETE,[base]/AllergyIntolerance/[id], delete  an existing legacy AllergyIntolerance, system/AllergyIntolerance.d"

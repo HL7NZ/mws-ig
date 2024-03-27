@@ -92,6 +92,45 @@
                   Ref: pLambdaNameNes  
                 passthroughBehavior: "when_no_match"
                 timeoutInMillis: 29000
+                
+ 
+    delete:
+      parameters:
+      - name: "userid"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-correlation-ID"
+        in: "header"
+        schema:
+          type: "string"
+      - name: "mwsid"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      - name: "x-api-key"
+        in: "header"
+        required: true
+        schema:
+          type: "string"
+      - name: "X-Request-Id"
+        in: "header"
+        schema:
+          type: "string"
+      responses:
+        "405":
+          description: "405 response - delete not permitted on htis resource"
+          content: {}
+       
+        "204":
+          description: "204 response - success"
+          content: {}
+      security:
+      - hip-fhir-cog:
+        - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.r"
+      - api_key: []
 
   /fhir/mws/v1/AllergyIntolerance:
   
