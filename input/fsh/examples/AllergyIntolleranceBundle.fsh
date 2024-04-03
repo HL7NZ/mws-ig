@@ -36,6 +36,11 @@ Usage: #example
 * entry[0].resource.code.coding.display = "olodaterol"
 
 
+* entry[0].resource.reaction.manifestation.coding.system = "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
+* entry[0].resource.reaction.manifestation.coding.code = #165423001
+* entry[0].resource.reaction.manifestation.coding.display = "Red blood cell count below reference range"
+
+
 Instance: Recorder3
 InstanceOf: PractitionerRole
 Description: "Example Recorder3"

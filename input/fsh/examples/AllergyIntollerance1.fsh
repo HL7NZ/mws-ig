@@ -28,6 +28,9 @@ Usage: #example
 
 * onsetDateTime = "2023"
 
+* reaction.manifestation.coding.system = "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
+* reaction.manifestation.coding.code = #128477000
+* reaction.manifestation.coding.display = "Abscess"
 
 
 * contained[0] = Patient1

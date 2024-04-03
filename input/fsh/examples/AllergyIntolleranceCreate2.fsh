@@ -23,6 +23,10 @@ Usage: #example
 * code.coding.code = #10758391000116108 
 * code.coding.display = "thioridazine hydrochloride"
 
+*  reaction.manifestation.coding.system = "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
+* reaction.manifestation.coding.code = #90128006
+* reaction.manifestation.coding.display = "Photosensitivity"
+
 * contained[0] = Patient4
 * contained[1] = Recorder4
 

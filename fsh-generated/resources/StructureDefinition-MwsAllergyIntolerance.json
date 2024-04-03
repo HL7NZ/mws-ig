@@ -564,7 +564,7 @@
         "short": "active | inactive | resolved",
         "definition": "The clinical status of the allergy or intolerance.",
         "comment": "Refer to [discussion](extensibility.html#Special-Case) if clincalStatus is missing data.\nThe data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "AllergyIntolerance.clinicalStatus",
@@ -1825,7 +1825,6 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
-        "min": 1,
         "binding": {
           "strength": "required",
           "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
