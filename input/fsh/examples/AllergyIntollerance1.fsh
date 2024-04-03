@@ -23,7 +23,7 @@ Usage: #example
 * code.coding.code = #46043541000116107 
 * code.coding.display = "A/California/7/2009 (H1N1) - like strain (NYMC X-181) + A/Switzerland/9715293/2013 (H3N2) - like strain (A/Switzerland/9715293/2013 NIB-88) + B/Phuket/3073/2013 - like strain (B/Phuket/3073/2013)"
 
-* patient = Reference(Patient1)
+* patient = Reference(Patient/ZJM9397)
 * recorder = Reference(Recorder1)
 
 * onsetDateTime = "2023"
@@ -33,8 +33,7 @@ Usage: #example
 * reaction.manifestation.coding.display = "Abscess"
 
 
-* contained[0] = Patient1
-* contained[1] = Recorder1
+* contained[0] = Recorder1
 
 
 Instance: Recorder1
@@ -49,13 +48,3 @@ Usage: #inline
 * location = Reference(Location/FZZ968-B)
 * location.display = "Facility Has All Contact Types TEST"
 
-
-Instance: Patient1 
-InstanceOf: MwsPatient
-Usage: #inline
-* name[0].family = "Ryan"
-* name[=].given[0] = "Jamie"
-* name[=].given[+] = "Joseph"
-* birthDate = "1972-06-05"
-* identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
-* identifier.value = "ZJM9397"
