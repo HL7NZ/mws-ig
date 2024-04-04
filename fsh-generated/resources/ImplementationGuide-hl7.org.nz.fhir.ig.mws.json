@@ -82,6 +82,14 @@
       },
       {
         "reference": {
+          "reference": "AllergyIntolerance/13831"
+        },
+        "name": "MwsAllergyIntoleranceLegacy-1",
+        "description": "Example MwsAllergyIntolerance legacy (uncoded)",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
           "reference": "Bundle/AI123456"
         },
         "name": "MwsAllergyIntoleranceBundle-1",

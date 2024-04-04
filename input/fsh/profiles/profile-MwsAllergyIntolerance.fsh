@@ -40,6 +40,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 //restrictions
 //* meta.profile only http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance
 * clinicalStatus from https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical
+* clinicalStatus ^short = "active | inactive"
 * onset[x] only dateTime
 * recorder only  Reference(PractitionerRole) 
 
@@ -50,6 +51,7 @@ Description:    "Restricts AllergyIntolerance to the elements needed to describe
 
 * code from $nzulm
 * verificationStatus from $verificationStatus
+* verificationStatus  ^short = "refuted | entered-in-error"
 * reaction 0..1
 * reaction.manifestation 1..50
 * reaction.manifestation from $snowmed-351000210106

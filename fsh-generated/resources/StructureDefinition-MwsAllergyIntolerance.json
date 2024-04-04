@@ -561,7 +561,7 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
-        "short": "active | inactive | resolved",
+        "short": "active | inactive",
         "definition": "The clinical status of the allergy or intolerance.",
         "comment": "Refer to [discussion](extensibility.html#Special-Case) if clincalStatus is missing data.\nThe data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
         "min": 0,
@@ -611,7 +611,7 @@
       {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
-        "short": "unconfirmed | confirmed | refuted | entered-in-error",
+        "short": "refuted | entered-in-error",
         "definition": "Assertion about certainty associated with the propensity, or potential risk, of a reaction to the identified substance (including pharmaceutical product).",
         "comment": "The data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
         "min": 0,
@@ -1825,6 +1825,7 @@
       {
         "id": "AllergyIntolerance.clinicalStatus",
         "path": "AllergyIntolerance.clinicalStatus",
+        "short": "active | inactive",
         "binding": {
           "strength": "required",
           "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
@@ -1833,6 +1834,7 @@
       {
         "id": "AllergyIntolerance.verificationStatus",
         "path": "AllergyIntolerance.verificationStatus",
+        "short": "refuted | entered-in-error",
         "binding": {
           "strength": "required",
           "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status"
