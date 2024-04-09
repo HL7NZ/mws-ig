@@ -51,13 +51,13 @@ table, th, td {
 <td>MWS Allergy Intolerance Read</td>
 <td>To allow access to get a MWS Allergy Intolerance record by mws-id, or to get a person’s MWS Allergy Intolerance records using NHI and other search parameters</td>
 <td><a href="geAllergyIntolerance..html">See Get MWS Allergy Intolerance. use case</a> <br />
-<a href="searcAllergyIntolerance.html">See Search MWS Allergy Intolerance. use case</a> </td>
+<a href="searchAllergyIntolerance.html">See Search MWS Allergy Intolerance. use case</a> </td>
 </tr>
 
 <tr>
 <td>MWS Allergy Intolerance Maintain</td>
 <td>Update MWS Allergy Intolerance records</td>
-<a href="updateAllergyIntolerance.html">See update MWS Allergy Intolerance use case</a></td>
+<td><a href="updateAllergyIntolerance.html">See update MWS Allergy Intolerance use case</a></td>
 </tr>
 
 <tr>
