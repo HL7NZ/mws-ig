@@ -23,31 +23,29 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 
 ##### Recorder CPN is known
 
-This is an example of a create request in which the recroder's CPN is known:
+This is an example of a create request in which the recorder's CPN is known:
 [create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance.json.html)
 
 The recorder is provided as a relative literal reference to an HPIPractitioner 
 
 ```
  "practitioner": {
-        "reference": "Practitioner/99ZZZS",
-        "display": "Mrs TestOne Prefix-Test"
+        "reference": "Practitioner/99ZZZS"
       }
 ```
 
 ##### Recorder CPN is not known
 
-This is an example of a create request in which the recroder's CPN is not known:
+This is an example of a create request in which the recorder's CPN is not known:
 [create AllergyIntolerance request - unknown CPN](AllergyIntolerance-MwsAllergyIntolerance-3.json.html)
-The recorder is given as a logical  reference using the local identifier and namespace
+The recorder is given as a logical reference using the local identifier and namespace
 
 ```
  "practitioner": {
         "identifier": {
           "value": "my-local-practionerid-1234",
           "system": "http://my-local-practioner-namespace.co.nz"
-        },
-        "display": "Mrs TestOne Prefix-Test"
+        }
       }
 ```
 

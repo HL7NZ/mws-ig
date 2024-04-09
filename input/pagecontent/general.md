@@ -230,7 +230,7 @@ table, th, td {
 
 #### OAUTH2
 
-The NES server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services
+The MWS server uses the OAUTH2 Client Credentials flow for authentication and authorisation and complies with the SMART specification for backend services
 
 #### Scopes
 
@@ -243,16 +243,11 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th> Domain </th><th> SMART on FHIR Scopes </th><th> Description </th></tr>
-<tr><td>Enrolment</td><td> https://api.hip.digital.health.nz/fhir/system/EpisodeOfCare.r </td><td> Read access to Enrolment records </td></tr>
-<tr><td>Enrolment</td><td> https://api.hip.digital.health.nz/fhir/system/EpisodeOfCare.s </td><td> Search access to Enrolment records </td></tr>
-<tr><td>Enrolment</td><td> https://api.hip.digital.health.nz/fhir/system/EpisodeOfCare.u </td><td> Update access to Enrolment records </td></tr>
-<tr><td>Enrolment</td><td> https://api.hip.digital.health.nz/fhir/system/EpisodeOfCare.c </td><td> Create access to Enrolment records </td></tr>
-<tr><td>Entitlement</td><td> https://api.hip.digital.health.nz/fhir/system/Coverage.r </td><td> Read access to Entitlement records </td></tr>
-<tr><td>Entitlement</td><td> https://api.hip.digital.health.nz/fhir/system/Coverage.s </td><td> Search access to Entitlement records </td></tr>
-<tr><td>Entitlement</td><td> https://api.hip.digital.health.nz/fhir/system/Coverage.u </td><td> Update access to Entitlement records </td></tr>
-<tr><td>Entitlement</td><td> https://api.hip.digital.health.nz/fhir/system/Coverage.c </td><td> Create access to Entitlement records </td></tr>
-<tr><td>New born enrolments</td><td> https://api.hip.digital.health.nz/fhir/system/MessageHeader.c </td><td> Create and respond to enrolment nomination</td></tr>
+<tr><th> SMART on FHIR Scopes </th><th> Description </th></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.r </td><td> Read access to MWS Allergy Intolerance records </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.u </td><td> Update access to MWS Allergy Intolerance records </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.c </td><td> Create access to MWS Allergy Intolerance records </td></tr>
+<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.d </td><td> Delete access to MWS Allergy Intolerance records </td></tr>
 </table>
 
 

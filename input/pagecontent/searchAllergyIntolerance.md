@@ -10,11 +10,11 @@ This is typically used to get all AllergyIntolerances for a patient.
 
 
 
-####  Get Enrolment for Patient  processing steps:
+####  Get AllergyIntolerance for Patient  processing steps:
 
-1. A FHIR Client sends a GET request  to the NES  *AllergyIntolerance* endpoint with  the 'patient' query parameter specifying the patient's NHI number
+1. A FHIR Client sends a GET request  to the MWS  *AllergyIntolerance* endpoint with  the 'patient' query parameter specifying the patient's NHI number
 2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-3. AllergyIntolerances for  this NHI are retrieved from the NES database
+3. AllergyIntolerances for  this NHI are retrieved from the MWS database
 4. A bundle of MwsAllergyIntolerance resources is returned to the client
 
 
@@ -27,11 +27,11 @@ This is typically used to get all AllergyIntolerances for a patient.
 
 
 ### Search AllergyIntolerance for Patient
-This is typically used to find all AllergyIntolerances for a patient filtered by type or status. 
+This is used to find all AllergyIntolerances for a patient filtered by category. 
 
 
 <div>
-{% include search-AllergyIntolerance.svg %}
+{% include search-search-AllergyIntoleranceByCategory.svg %}
 </div>
 
 

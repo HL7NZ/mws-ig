@@ -1,0 +1,18 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title  AllergyIntolerance Search
+participant "FHIR Client" as A #CornflowerBlue
+participant "MWS Service " as B #CornflowerBlue
+participant "MWS database" as C #CornflowerBlue
+
+A -> B: GET [base]/AllergyIntolerance?patient=ZAA0792&category=food
+B -> B: Validate
+B -> C: query
+C -[dashed]-> B:
+
+B -[dashed]-> A: AllergyIntolerance Bundle Response 
+
+@enduml
