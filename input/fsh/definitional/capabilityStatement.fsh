@@ -24,7 +24,7 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
 * rest.resource[=].interaction[0].code = #read
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
-* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntoleranc/[id],Used to retrieve a Patient's AllergyIntolerances, system/AllergyIntolerance.r"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntolerance/[id],Used to retrieve a Patient's AllergyIntolerances, system/AllergyIntolerance.r"
 
 * rest.resource[=].interaction[+].code = #create
 * rest.resource[=].interaction[=].documentation = "POST,[base]/AllergyIntolerance, create a new AllergyIntolerances, system/AllergyIntolerance.c"

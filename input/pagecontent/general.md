@@ -234,21 +234,7 @@ The MWS server uses the OAUTH2 Client Credentials flow for authentication and au
 
 #### Scopes
 
-The following scopes are supported. For more information on available functionality please see [Business Functions](/Onboarding.html#business-functions).
-
-<table>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-</style>
-<tr><th> SMART on FHIR Scopes </th><th> Description </th></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.r </td><td> Read access to MWS Allergy Intolerance records </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.u </td><td> Update access to MWS Allergy Intolerance records </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.c </td><td> Create access to MWS Allergy Intolerance records </td></tr>
-<tr><td> https://api.hip.digital.health.nz/fhir/system/AllergyIntollernce.d </td><td> Delete access to MWS Allergy Intolerance records </td></tr>
-</table>
+See [API](API.html) for a description of the scopes required for each operation.
 
 
 #### API Keys and Usage Plans

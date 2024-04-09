@@ -56,15 +56,10 @@ table, th, td {
 
 <tr>
 <td>MWS Allergy Intolerance Maintain</td>
-<td>Update MWS Allergy Intolerance records</td>
+<td>Create and update MWS Allergy Intolerance records</td>
 <td><a href="updateAllergyIntolerance.html">See update MWS Allergy Intolerance use case</a></td>
 </tr>
 
-<tr>
-<td>MWS Allergy Intolerance Create</td>
-<td>Create MWS Allergy Intolerance records</td>
-<td><a href="createAllergyIntolerance.html">See create MWS Allergy Intolerance use case</a></td>
-</tr>
 
 <tr>
 <td>MWS Allergy Intolerance Delete </td>
