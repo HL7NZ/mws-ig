@@ -63,13 +63,13 @@ table, th, td {
 <tr>
 <td>MWS Allergy Intolerance Create</td>
 <td>Create MWS Allergy Intolerance records</td>
-<td><a href="createAllergyIntolerance.html">See create MWS Allergy Intolerance use case</a> <br />
+<td><a href="createAllergyIntolerance.html">See create MWS Allergy Intolerance use case</a></td>
 </tr>
 
 <tr>
 <td>MWS Allergy Intolerance Delete </td>
 <td>Delete a legacy MWS Allergy Intolerance record</td>
-<td><a href="deleteAllergyIntolerance.html">See delete MWS Allergy Intolerance use case</a> <br />
+<td><a href="deleteAllergyIntolerance.html">See delete MWS Allergy Intolerance use case</a></td>
 </tr>
 
 </table>
