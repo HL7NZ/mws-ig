@@ -31,7 +31,7 @@ This is used to find all AllergyIntolerances for a patient filtered by category.
 
 
 <div>
-{% include search-search-AllergyIntoleranceByCategory.svg %}
+{% include search-AllergyIntoleranceByCategory.svg %}
 </div>
 
 
