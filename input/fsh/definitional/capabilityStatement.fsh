@@ -24,13 +24,13 @@ Usage: #definition
 * rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
 * rest.resource[=].interaction[0].code = #read
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
-* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntolerance/[id],Used to retrieve a Patient's AllergyIntolerances, system/AllergyIntolerance.r"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntolerance/[id],retrieve an AllergyIntolerance, system/AllergyIntolerance.r"
 
 * rest.resource[=].interaction[+].code = #create
-* rest.resource[=].interaction[=].documentation = "POST,[base]/AllergyIntolerance, create a new AllergyIntolerances, system/AllergyIntolerance.c"
+* rest.resource[=].interaction[=].documentation = "POST,[base]/AllergyIntolerance, create a new AllergyIntolerance, system/AllergyIntolerance.c"
 
 * rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntolerance, search for AllergyIntolerances, system/AllergyIntolerance.s"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/AllergyIntolerance, search for a Patient's  AllergyIntolerances, system/AllergyIntolerance.s"
 
 * rest.resource[=].searchParam[0].name = "patient"
 * rest.resource[=].searchParam[0].type = #string
