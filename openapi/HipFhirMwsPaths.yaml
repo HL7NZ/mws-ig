@@ -40,6 +40,15 @@
       - hip-fhir-cog:
         - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.r"
       - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-only
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNes  
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
    
     put:
       parameters:
@@ -131,6 +140,15 @@
       - hip-fhir-cog:
         - "https://api.hip.digital.health.nz/fhir/system/AllergyIntolerance.r"
       - api_key: []
+      
+      x-amazon-apigateway-request-validator: params-and-body
+      x-amazon-apigateway-integration:
+                type: "aws_proxy"
+                httpMethod: "POST"
+                uri: 
+                  Ref: pLambdaNameNes  
+                passthroughBehavior: "when_no_match"
+                timeoutInMillis: 29000
 
   /fhir/mws/v1/AllergyIntolerance:
   
