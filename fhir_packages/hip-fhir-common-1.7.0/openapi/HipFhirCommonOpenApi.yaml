@@ -1927,13 +1927,13 @@ components:
             description: Details about each adverse reaction event linked to exposure to
               the identified substance.
             items:
-              $ref: "#/components/schemas/AllergyIntolerance_Reaction"
+              $ref: "#/components/schemas/AllergyIntoleranceReaction"
             type: array
         additionalProperties: false
         required:
         - patient
         - resourceType
-    AllergyIntolerance_Reaction:
+    AllergyIntoleranceReaction:
         description: Risk of harmful or undesirable, physiological response which is unique
           to an individual and associated with exposure to a substance.
         properties:

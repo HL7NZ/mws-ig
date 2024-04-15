@@ -27,7 +27,7 @@ echo "ig_version = $ig_version"
  
 cp "./fhir_packages/hip-fhir-common-$common_version/openapi/HipFhirCommonOpenApi.yaml" ./openapi/$IG_FILENAME.yaml
 
-#add the NES paths to the common openapi spec
+#add the MWS paths to the common openapi spec
 newpath=$(< ./openapi/$PATHS_FILENAME)  yq -i '.paths=env(newpath) ' openapi/$IG_FILENAME.yaml 
 newversion=$(yq '.version' ./sushi-config.yaml)   yq -i '.info.version=env(newversion) ' openapi/$IG_FILENAME.yaml
 
