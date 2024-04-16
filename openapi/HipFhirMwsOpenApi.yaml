@@ -1974,10 +1974,14 @@ components:
           description: The source of the information about the allergy that is recorded.
           $ref: "#/components/schemas/Reference"
         note:
-          description: Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.
-          items:
-            $ref: "#/components/schemas/string"
-          type: array
+            description: Additional narrative about the propensity for the Adverse Reaction,
+              not captured in other fields.
+            items:
+              type: "object"
+              properties:
+                text:
+                  $ref: "#/components/schemas/string"
+            type: array
         reaction:
           description: Details about each adverse reaction event linked to exposure to the identified substance.
           items:
