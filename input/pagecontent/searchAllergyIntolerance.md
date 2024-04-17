@@ -32,7 +32,7 @@ This is used to find all AllergyIntolerances for a patient filtered by category.
 </div>
 
 
-<h3>Get AllergyIntolerance for Patient and Search AllergyIntolerance Business Rules and Errors</h3>
+<h3>Get and Search AllergyIntolerance for Patient Business Rules and Errors</h3>
 <table>
 <style>
 table, th, td {
