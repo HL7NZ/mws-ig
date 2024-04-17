@@ -26,7 +26,7 @@ The Get AllergyIntolerance operation allows an authorised user to retrieve an Al
 [get-AllergyIntolerance-response](AllergyIntolerance-AI667788899.json.html)
 
 
-<h4>Get AllergyIntolerance Business Rules and Errors</h4>
+<h4>Get AllergyIntolerance by id Business Rules and Errors</h4>
 <table>
 <style>
 table, th, td {
