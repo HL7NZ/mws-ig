@@ -113,11 +113,11 @@ Severity: #error
 
 Invariant: NOTE-LENGTH
 Expression: "AllergyIntolerance.note.text.all(length()<1024)"
-Description: "System URLs must be less than 1024 characters"
+Description: "Notes must be less than 1024 characters"
 Severity: #error
 
 
 Invariant: NOTE-ALLOWED-CHARS
 Expression: "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))"
-Description: "character restrictions for system url"
+Description: "character restrictions for notes"
 Severity: #error

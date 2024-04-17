@@ -2,7 +2,7 @@ openapi: "3.0.1"
 info:
   title: "HIP NES FHIR"
   description: "Te Whatu Ora Enrolment and Entitlement FHIR services"
-  version: "1.0.0"
+  version: "1.0.1"
 servers:
   - url: "https://gb2r96qpik.execute-api.ap-southeast-2.amazonaws.com/{basePath}"
     variables:
@@ -132,6 +132,24 @@ paths:
       parameters:
         - name: "patient"
           in: "query"
+          schema:
+            type: "string"
+        - name: "userid"
+          in: "header"
+          required: true
+          schema:
+            type: "string"
+        - name: "X-correlation-ID"
+          in: "header"
+          schema:
+            type: "string"
+        - name: "x-api-key"
+          in: "header"
+          required: true
+          schema:
+            type: "string"
+        - name: "X-Request-Id"
+          in: "header"
           schema:
             type: "string"
       responses:
@@ -1902,7 +1920,9 @@ components:
           items:
             anyOf:
               - $ref: "#/components/schemas/Reference"
-        extension:
+              - $ref: "#/components/schemas/NesPractitionerRole"
+              - $ref: "#/components/schemas/Patient"
+        extension:        
           type: array
           items:
             anyOf:
@@ -1974,14 +1994,14 @@ components:
           description: The source of the information about the allergy that is recorded.
           $ref: "#/components/schemas/Reference"
         note:
-            description: Additional narrative about the propensity for the Adverse Reaction,
-              not captured in other fields.
-            items:
-              type: "object"
-              properties:
-                text:
-                  $ref: "#/components/schemas/string"
-            type: array
+          
+          description: Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.
+          items:
+            type: "object"
+            properties:
+              text:
+                $ref: "#/components/schemas/string"
+          
         reaction:
           description: Details about each adverse reaction event linked to exposure to the identified substance.
           items:

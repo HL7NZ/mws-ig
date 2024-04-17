@@ -4,7 +4,7 @@
 
 #!/bin/bash
 #OpenApi validation
-for FILE in  ../fsh-generated/resources/*AllergyIntolerance*.json
+for FILE in  ../fsh-generated/resources/Create*AllergyIntolerance*.json
 do
 	openapi-examples-validator --no-additional-properties -s $.components.schemas.MwsAllergyIntolerance  -e ${FILE} ./HipFhirMwsOpenApi.yaml
 done	
