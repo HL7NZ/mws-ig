@@ -50,6 +50,7 @@ menu:
     Search AllergyIntolerance: searchAllergyIntolerance.html
     Create AllergyIntolerance: createAllergyIntolerance.html
     Update AllergyIntolerance: updateAllergyIntolerance.html
+    Delete AllergyIntolerance: deleteAllergyIntolerance.html
  
   Important information:
     Onboarding: Onboarding.html
