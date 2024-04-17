@@ -168,6 +168,12 @@ table, th, td {
 <td></td>
 <td></td>
 <td>None of the codings provided are in the value set  mws manifestations</td></tr>
+
+<tr><td>The set of manifestations must not include any duplicate manifestation codes</td>
+<td>400 Bad request</td>
+<td>EM7307</td>
+<td>Contains duplicates</td>
+<td>The set of reaction manifestations contains duplicate manifestation codes</td></tr>
 </table>
 
 
