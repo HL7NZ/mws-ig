@@ -49,6 +49,7 @@ menu:
     Get AllergyIntolerance: getAllergyIntolerance.html
     Search AllergyIntolerance: searchAllergyIntolerance.html
     Create AllergyIntolerance: createAllergyIntolerance.html
+    Update AllergyIntolerance: updateAllergyIntolerance.html
  
   Important information:
     Onboarding: Onboarding.html
