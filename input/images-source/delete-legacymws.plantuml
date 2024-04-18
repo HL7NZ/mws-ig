@@ -1,0 +1,32 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Delete Legacy Medical Warning by ID
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "MWS service" as B #CornflowerBlue
+participant "Legacy MWS database" as C #CornflowerBlue
+|||
+User -> A: Enter LegacyMWS-id
+activate A
+|||
+A -> B: DELETE [base]/AllergyIntolerance/[LegacyMWS-id]
+activate B
+|||
+B -> B: Validate[]
+|||
+B -> C: Request
+activate C
+|||
+C -[dashed]-> B:  
+deactivate C
+|||
+B -[dashed]-> A: HTTP 204 No Content 
+deactivate B
+|||
+A -> User: Display success message to user
+deactivate A
+|||
+@enduml
