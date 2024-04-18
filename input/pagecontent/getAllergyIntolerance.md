@@ -45,5 +45,5 @@ table, th, td {
 <td> 404 Not found </td>
 <td> EM02002 </td>
 <td> Cannot be found </td>
-<td> The MWS id cannot be found in MWS </td></tr>
+<td> The MWS id cannot be found</td></tr>
 </table>
