@@ -17,6 +17,12 @@ The Update AllergyIntolerance operation is initiated by a user who needs to upda
 4. A updated MwsAllergyIntolerance record is returned to the client
 
 
+####  Update AllergyIntolerance Request Example
+
+This is an example of an update request:
+[update AllergyIntolerance](AllergyIntolerance-MwsAllergyIntolerance-4.json.html)
+
+
 <h4>Update AllergyIntolerance Errors</h4>
 <table>
 <style>
