@@ -6,7 +6,7 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 
 
 <div>
-{% include delete-allergy-intolerance.svg %}
+{% include delete-legacymws.svg %}
 </div>
 
 
