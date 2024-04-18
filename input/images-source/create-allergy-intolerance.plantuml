@@ -6,7 +6,7 @@ skinparam sequenceParticipant bold
 title  Create AllergyIntolerance
 participant "FHIR Client" as A #CornflowerBlue
 participant "MWS service " as B #CornflowerBlue
-participant "MWS database" as C #CornflowerBlue
+participant "MWS FHIR database" as C #CornflowerBlue
 
 A -> B: POST[base]/AllergyIntolerance
 B -> B: Validate
