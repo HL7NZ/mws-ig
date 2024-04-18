@@ -24,7 +24,7 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 ##### Recorder CPN is known
 
 This is an example of a create request in which the recorder's CPN is known:
-[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance.json.html)
+[create AllergyIntolerance request - CPN known](AllergyIntolerance-MwsAllergyIntolerance-2.json.html)
 
 The recorder is provided as a relative literal reference to an HPIPractitioner 
 
