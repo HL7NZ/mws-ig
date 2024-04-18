@@ -1,4 +1,4 @@
-Instance: undefined
+Instance: MwsAllergyIntolerance-2
 InstanceOf: AllergyIntolerance
 Description: "Example MwsAllergyIntolerance Create request - CPN known"
 Usage: #example
