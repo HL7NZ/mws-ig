@@ -222,7 +222,7 @@ table, th, td {
 <td>422 Unprocessable content</td>
 <td></td>
 <td></td>
-<td>Reaction.manifestation: max allowed = 50, but found <count></td></tr>
+<td>Reaction.manifestation: max allowed = 50, but found &lt;count&gt;</td></tr>
 
 <tr><td>The set of manifestations must not include any duplicate manifestation codes</td>
 <td>400 Bad request</td>
