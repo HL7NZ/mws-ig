@@ -44,22 +44,26 @@ releaseLabel: Release
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
+
   Business View: businessView.html
+
   Use cases:
     Get AllergyIntolerance: getAllergyIntolerance.html
     Search AllergyIntolerance: searchAllergyIntolerance.html
     Create AllergyIntolerance: createAllergyIntolerance.html
     Update AllergyIntolerance: updateAllergyIntolerance.html
     Delete Legacy Medical Warning: deleteLegacyMedicalWarning.html
- 
+
   Important information:
     Onboarding: Onboarding.html
     General Notes: general.html
     FAQ: FAQ.html
     Glossary: glossary.html
+
   Compliance testing:
     Compliance testing important information: ComplianceTestingImportantInformation.html
-   
+    Search AllergyIntolerance Compliance Testing: SearchAllergyIntoleranceComplianceTesting.html
+
   API: API.html
   Profiles: profiles.html
 
