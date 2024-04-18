@@ -50,7 +50,7 @@ menu:
     Search AllergyIntolerance: searchAllergyIntolerance.html
     Create AllergyIntolerance: createAllergyIntolerance.html
     Update AllergyIntolerance: updateAllergyIntolerance.html
-    Delete AllergyIntolerance: deleteAllergyIntolerance.html
+    Delete Legacy Medical Warning: deleteLegacyMedicalWarning.html
  
   Important information:
     Onboarding: Onboarding.html
