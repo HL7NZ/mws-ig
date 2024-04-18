@@ -1,0 +1,32 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Update AllergyIntolerance by ID
+actor "Integrating application user" as User #CornflowerBlue
+participant "Integrating application" as A #CornflowerBlue
+participant "MWS service" as B #CornflowerBlue
+participant "MWS FHIR database" as C #CornflowerBlue
+|||
+User -> A: Enter AllergyIntolerance informationd
+activate A
+|||
+A -> B: PUT [base]/AllergyIntolerance/[AllergyIntolerance-id]
+activate B
+|||
+B -> B: Validate[]
+|||
+B -> C: Request
+activate C
+|||
+C -[dashed]-> B:  
+deactivate C
+|||
+B -[dashed]-> A :Return updated MwsAllergyIntolerance record 
+deactivate B
+|||
+A -> User: Display AllergyIntolerance details
+deactivate A
+|||
+@enduml
