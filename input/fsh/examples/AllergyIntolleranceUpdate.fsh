@@ -1,4 +1,4 @@
-Instance: cff10119-671c-4e6f-8776-0a573344320a
+Instance: MwsAllergyIntolerance-4
 InstanceOf: AllergyIntolerance
 Description: "Example MwsAllergyIntolerance Update request"
 Usage: #example
