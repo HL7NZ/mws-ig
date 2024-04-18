@@ -1,8 +1,8 @@
 
 
-### Delete AllergyIntolerance  for Patient
+### Delete a Legacy Medical Warning for a Patient
 
-The Create AllergyIntolerance  operation is initiated by a user who needs to create a new AllergyIntolerance for a patient.
+Can you add to the delete screen. "The delete operation would be used when a user has selected a legacy uncoded warning, has added any additional data required and have created a FHIR AllergyIntolerance resource. The original legacy warning record can now be deleted."
 
 
 <div>
