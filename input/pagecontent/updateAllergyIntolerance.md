@@ -35,7 +35,7 @@ table, th, td {
 <td>404 Not found</td>
 <td></td>
 <td></td>
-<td>Allergy Intolerance with identifier <id> not found</td></tr>
+<td>Allergy Intolerance with identifier &lt;id&gt; not found</td></tr>
 
 <tr><td>The version supplied must match the version of the current record</td>
 <td>400 Bad request</td>
