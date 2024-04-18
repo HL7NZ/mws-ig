@@ -25,6 +25,25 @@ The Get AllergyIntolerance operation allows an authorised user to retrieve an Al
 ####  Get AllergyIntolerance Response Example 
 [get-AllergyIntolerance-response](AllergyIntolerance-AI667788899.json.html)
 
-#### Business  Rules
-1.  A Get AllergyIntolerance request must include a valid AllergyIntolerance-id
 
+<h4>Get AllergyIntolerance by id Business Rules and Errors</h4>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th> Business Rule </th>
+<th> HTTP error </th>
+<th> EM error </th>
+<th> Codesystem displayname </th>
+<th> Additional description </th>
+</tr>
+
+<tr><td> Id parameter must be in MWS </td>
+<td> 404 Not found </td>
+<td> EM02002 </td>
+<td> Cannot be found </td>
+<td> The MWS id cannot be found</td></tr>
+</table>

@@ -1,7 +1,10 @@
-Instance: MwsAllergyIntolerance-2
+Instance: MwsAllergyIntolerance-4
 InstanceOf: AllergyIntolerance
-Description: "Example MwsAllergyIntolerance Create request - CPN known"
+Description: "Example MwsAllergyIntolerance Update request"
 Usage: #example
+* identifier.system = "https://standards.digital.health.nz/ns/mws-id"
+* identifier.value = "cff10119-671c-4e6f-8776-0a573344320a"
+* meta.versionId = "1"
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
 * contained[0] = recorder
 * contained[+] = patient
@@ -28,9 +31,8 @@ Usage: #inline
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsPatient"
 * identifier.use = #official
 * identifier.system = "https://standards.digital.health.nz/ns/nhi-id"
-* identifier.value = "ZHF0848"
-* name.family = "Doyle"
-* name.given[0] = "Dandre"
-* name.given[+] = "Alessandra"
-* birthDate = "2020-08-20"
-
+* identifier.value = "ZHF0864"
+* name.family = "Lynch"
+* name.given[0] = "Miracle"
+* name.given[+] = "Rosanna"
+* birthDate = "2021-10-11"

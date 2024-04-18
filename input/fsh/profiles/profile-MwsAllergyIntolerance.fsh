@@ -15,7 +15,6 @@ Parent:         AllergyIntolerance
 
 Id:             MwsAllergyIntolerance
 Title:          "MwsAllergyIntolerance"
-Description:    "Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG"
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
 

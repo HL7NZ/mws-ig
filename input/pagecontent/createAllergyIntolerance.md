@@ -24,7 +24,7 @@ The Create AllergyIntolerance  operation is initiated by a user who needs to cre
 ##### Recorder CPN is known
 
 This is an example of a create request in which the recorder's CPN is known:
-[create AllergyIntolerance request](AllergyIntolerance-MwsAllergyIntolerance.json.html)
+[create AllergyIntolerance request - CPN known](AllergyIntolerance-MwsAllergyIntolerance-2.json.html)
 
 The recorder is provided as a relative literal reference to an HPIPractitioner 
 
@@ -60,12 +60,7 @@ The recorder is given as a logical reference using the local identifier and name
 * A new AllergyIntolerance record is created in MWS with the details populated in the request.
 
 
-#### Business  Rules
-
-* To do 
-
-
-<h3>Create AllergyIntolerance Errors</h3>
+<h4>Create AllergyIntolerance Errors</h4>
 <table>
 <style>
 table, th, td {
@@ -73,18 +68,165 @@ table, th, td {
   border-collapse: collapse;
 }
 </style>
-<tr><th>Error Scenario</th>
-<th>Error Code</th>
-<th>Error Message</th>
-<th>HTTP Status code</th></tr>
+<tr><th>Business Rule</th>
+<th>HTTP error</th>
+<th>EM error</th>
+<th>Codesystem displayname</th>
+<th>Additional description</th></tr>
 
-<tr><td>An id must not be supplied on a create operation</td>
-<td>EM07302 </td>
-<td>Must not be supplied</td>
-<td><em>422 Unprocessable entity</em></td></tr>
+<tr><td>Clinical Status must be a valid code</td>
+<td>422 Processable content </td>
+<td></td>
+<td></td>
+<td>None of the codings provided are in the value set Mws clinical status</td></tr>
 
+<tr><td>Clinical Status is a required field</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>Clinical Status is a required field on create</td></tr>
 
+<tr><td>Verification Status must be a valid code</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>None of the codings provided are in the value set Mws verification status</td></tr>
+
+<tr><td>Clinical status not allowed if verification status is entered-in-error</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>Clinical status not allowed if verification status is entered-in-error</td></tr>
+
+<tr><td>Verification status entered-in-error is not allowed on create</td>
+<td>400 Bad request</td>
+<td>EM07302</td>
+<td>Must not be supplied on this operation</td>
+<td>Verification status of enter-in-error must not be supplied on a create operation</td></tr>
+
+<tr><td>A verification status of refuted must have an inactive clinical status</td>
+<td>400 Bad request</td>
+<td>EM07202</td>
+<td>Field is required when another field is present</td>
+<td>A verification status of refuted must have an inactive clinical status</td></tr>
+
+<tr><td>Category is a required field</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>Category is a required field</td></tr>
+
+<tr><td>Category must be a valid code</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>None of the codings provided are in the value set allergy intolerance category</td></tr>
+
+<tr><td>Code is a required  field</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>AllergyIntolerance code is a required field</td></tr>
+
+<tr><td>Code must be a valid code</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>None of the codings provided are in the value set  mws substance combined</td></tr>
+
+<tr><td>NHI must be in the NHI system</td>
+<td>400 Bad request</td>
+<td>EM02002</td>
+<td>Cannot be found</td>
+<td>NHI number supplied cannot be found</td></tr>
+
+<tr><td>The patient demographics supplied must match the NHI details</td>
+<td>400 Bad request</td>
+<td>EM02008</td>
+<td>Patient identity information does not match Patient NHI supplied</td>
+<td>Patient details supplied do not match the NHI details</td></tr>
+
+<tr><td>Onset date cannot be in the future</td>
+<td>400 Bad request</td>
+<td>EM07212</td>
+<td>Cannot be a future date</td>
+<td>Onset date cannot be in the future</td></tr>
+
+<tr><td>Onset date must be greater than or equal to the patient's date of birth</td>
+<td>400 Bad request</td>
+<td>EM07303</td>
+<td>Date must be greater than date of birth</td>
+<td>Onset date must be greater than or equal to the patient's date of birth</td></tr>
+
+<tr><td>RecordedDate must not be supplied on a create</td>
+<td>400 Bad request</td>
+<td>EM07302</td>
+<td>Must not be supplied on this operation</td>
+<td>Recorded date must not be supplied on a create. Todays date is used</td></tr>
+
+<tr><td>Recorder location is a required field</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>Recorder HPI facilityID is a required field</td></tr>
+
+<tr><td>Recorder location must be a valid HPI facilityID </td>
+<td>400 Bad request</td>
+<td>EM02002</td>
+<td>Cannot be found</td>
+<td>HPI Facility ID not found in the HPI</td></tr>
+
+<tr><td>Recorder organization must be a valid HPI OrganisationID</td>
+<td>400 Bad request</td>
+<td>EM02002</td>
+<td>Cannot be found</td>
+<td>HPI Organisation ID not found in the HPI</td></tr>
+
+<tr><td>The recorder practitioner must be either an HPI CPN or a local identifier</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>Recorder Practitioner is a required field</td></tr>
+
+<tr><td>A recorder practitioner HPI CPN must be in the HPI</td>
+<td>400 Bad request</td>
+<td>EM02002</td>
+<td>Cannot be found</td>
+<td>HPI CPN not found in the HPI</td></tr>
+
+<tr><td>A recorder practitioner’s local identifier must have a system and an ID.</td>
+<td>400 Bad request</td>
+<td>EM07201</td>
+<td>Missing a required field</td>
+<td>A recorder's local identifier must have a system and ID</td></tr>
+
+<tr><td>Note must contain only allowed characters</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>Rule NOTE-ALLOWED-CHARS  character restrictions for notes</td></tr>
+
+<tr><td>Note must not exceed 1024 characters</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>Rule NOTE-LENGTH Notes must be less than 1024 characters</td></tr>
+
+<tr><td>Manifestation must be a valid code</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>None of the codings provided are in the value set  mws manifestations</td></tr>
+
+<tr><td>A maximum of 50 manifestations is allowed</td>
+<td>422 Unprocessable content</td>
+<td></td>
+<td></td>
+<td>Reaction.manifestation: max allowed = 50, but found &lt;count&gt;</td></tr>
+
+<tr><td>The set of manifestations must not include any duplicate manifestation codes</td>
+<td>400 Bad request</td>
+<td>EM7307</td>
+<td>Contains duplicates</td>
+<td>The set of reaction manifestations contains duplicate manifestation codes</td></tr>
 </table>
-
-
-

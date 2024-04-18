@@ -6,7 +6,7 @@ skinparam sequenceParticipant bold
 title  AllergyIntolerance Search
 participant "FHIR Client" as A #CornflowerBlue
 participant "MWS Service " as B #CornflowerBlue
-participant "MWS database" as C #CornflowerBlue
+participant "MWS FHIR database" as C #CornflowerBlue
 
 A -> B: GET [base]/AllergyIntolerance?patient=ZAA0792
 B -> B: Validate
