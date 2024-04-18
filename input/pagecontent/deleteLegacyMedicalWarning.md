@@ -2,7 +2,7 @@
 
 ### Delete a Legacy Medical Warning for a Patient
 
-Can you add to the delete screen. "The delete operation would be used when a user has selected a legacy uncoded warning, has added any additional data required and have created a FHIR AllergyIntolerance resource. The original legacy warning record can now be deleted."
+The delete operation would be used when a user has selected a legacy uncoded warning, has added any additional data required and have created a FHIR AllergyIntolerance resource. The original legacy warning record can now be deleted.
 
 
 <div>
@@ -45,12 +45,6 @@ table, th, td {
 <td>EM07304</td>
 <td>Delete not allowed</td>
 <td>Only legacy MWS records can be deleted. Identifier provided is not a legacy id</td></tr>
-
-<tr><td>The id must be a warning with a legacy category of DRUG or ALERGY. Delete is ignored if not DRUG or ALERGY</td>
-<td>204 No content</td>
-<td></td>
-<td></td>
-<td>The server successfully processed the request but is not returning any content</td></tr>
 </table>
 
 
