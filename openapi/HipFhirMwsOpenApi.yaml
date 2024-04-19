@@ -1449,7 +1449,7 @@ components:
           $ref: "#/components/schemas/string"
         display:
           $ref: "#/components/schemas/string"
-        id:
+        identifier:
           $ref: "#/components/schemas/string"
         type:
           $ref: "#/components/schemas/uri"
