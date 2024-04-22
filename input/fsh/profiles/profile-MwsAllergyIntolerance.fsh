@@ -79,7 +79,7 @@ Title:          "MwsAllergyIntolerance"
 * obeys NOTE-ALLOWED-CHARS
 
 
-//to do: allow unicocde
+
 Invariant: URL-LENGTH
 Expression: "AllergyIntolerance.descendants().url.all(length()<1024)"
 Description: "URLs must be less than 1024 characters"
