@@ -34,3 +34,6 @@ Description:    "A minimal profile of NzPatient, containing just enough informat
 * link 0..0
 * active 0..0
 
+//constrained
+* identifier 1..1
+* identifier.system = "https://standards.digital.health.nz/ns/nhi-id" (exactly)
