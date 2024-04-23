@@ -12,6 +12,7 @@ It includes the following attributes
 * onsetDate
 * Recorder
 * Recorded date
+* notes
 
 Other attributes from the standard profile maybe considered for future releases.
 
