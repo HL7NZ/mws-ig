@@ -5,3 +5,4 @@ The MWS IG repository holds the source code or generating the MWS (Medical Warni
 
 ## Release History
 4/10/2024 - v1.0.0 initial release
+23/4/2024 - v1.0.2
