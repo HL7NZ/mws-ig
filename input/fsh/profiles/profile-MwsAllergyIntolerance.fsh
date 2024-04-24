@@ -3,7 +3,7 @@ Alias: $suburb = http://hl7.org.nz/fhir/StructureDefinition/suburb
 Alias: $NZGeocode = http://hl7.org.nz/fhir/StructureDefinition/nz-geocode
 Alias: $buildingName = http://hl7.org.nz/fhir/StructureDefinition/building-name
 Alias: $domicileCode = http://hl7.org.nz/fhir/StructureDefinition/domicile-code
-Alias: $snowmed-351000210106 = http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106
+Alias: $snowmed-351000210106 = http://snomed.info/sct/21000210109/version/20240401?fhir_vs=refset%2F351000210106
 Alias: $nzulm = https://nzhts.digital.health.nz/fhir/ValueSet/mws-substance-combined
 Alias: $verificationStatus = https://nzhts.digital.health.nz/fhir/ValueSet/mws-verification-status
 
