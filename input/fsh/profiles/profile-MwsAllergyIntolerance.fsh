@@ -117,6 +117,6 @@ Severity: #error
 
 
 Invariant: NOTE-ALLOWED-CHARS
-Expression: "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/;:,āēīōūĀĒĪŌŪ\\\u005b\\\u005d\\\u0028\\\u0029\\u0026\\u003f\\u002b])*$'))"
-Description: "character restrictions for system url alphanumeric, plus Maori macron and special characters []();:,.+?/-'& "
+Expression: "AllergyIntolerance.note.text.all(matches('^.*\\u003c|\\u003e|\\u0022|\\u0027.*$').not())"
+Description: "character restrictions for system notes -excluding  special characters 2hcih may be used for xss "
 Severity: #error
