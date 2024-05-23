@@ -17,7 +17,7 @@ Usage: #example
 * verificationStatus.coding.code  = #refuted
 * recordedDate =  "2024-03-04T12:31:07+13:00"
 
-* note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces"
+* note.text = "Information in the note field will not be visible to people viewing the record through legacy HL7 or SOAP interfaces. Allows Māori macron āēīōūĀĒĪŌŪ and special characters []();:,.+?/-'& "
 
 * code.coding.system = "http://nzmt.org.nz"
 * code.coding.code = #46043541000116107 

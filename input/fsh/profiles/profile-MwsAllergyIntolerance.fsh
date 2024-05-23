@@ -105,7 +105,7 @@ Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(leng
 Description: "valueCodeableConcept.text must be less than 1024 characters"
 Severity: #error
 
-Invariant: CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS
+Invariant: CODEABLE-CONCEPT-TEXT-ALLOWED-CHARS\u003a
 Expression: "AllergyIntolerance.descendants().valueCodeableConcept.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))"
 Description: "character restrictions for valueCodeableConcept.text"
 Severity: #error
@@ -117,6 +117,6 @@ Severity: #error
 
 
 Invariant: NOTE-ALLOWED-CHARS
-Expression: "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,\u0101\u0113\u012b\u014d\u016b\u0100\u0112\u012a\u014c\u016a])*$'))"
-Description: "character restrictions for system url"
+Expression: "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/;:,āēīōūĀĒĪŌŪ\u005b\u005d\u0028\u0029\u0026\u003f\u002b])*$'))"
+Description: "character restrictions for system url alphanumeric, plus Maori macron and special characters []();:,.+?/-'& "
 Severity: #error
