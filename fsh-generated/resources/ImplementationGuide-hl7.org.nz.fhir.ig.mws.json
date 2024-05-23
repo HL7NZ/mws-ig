@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.mws",
   "url": "http://hl7.org.nz/fhir/ig/mws/ImplementationGuide/hl7.org.nz.fhir.ig.mws",
-  "version": "1.0.0-SNAPSHOT",
+  "version": "1.0.5",
   "name": "NewZealandMWSIG",
   "title": "New Zealand MWS IG",
   "status": "active",
@@ -33,8 +33,8 @@
     },
     {
       "packageId": "hl7.org.nz.fhir.ig.hip-core",
-      "uri": "https://dev.d3ox9vcqia2rpj.amplifyapp.com/site",
-      "version": "dev",
+      "uri": "https://common-ig.hip.digital.health.nz/site",
+      "version": "1.7.2",
       "id": "hl7_org_nz_fhir_ig_hip_core"
     }
   ],
@@ -42,18 +42,73 @@
     "resource": [
       {
         "reference": {
-          "reference": "StructureDefinition/MwsAllergyIntolerance"
-        },
-        "name": "MwsAllergyIntolerance",
-        "description": "Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/MwsPatient"
         },
         "name": "Mws Patient",
         "description": "A minimal profile of NzPatient, containing just enough information to validate a patient's NHI for the purposes of MWS",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MwsAllergyIntolerance"
+        },
+        "name": "MwsAllergyIntolerance",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/AI667788899"
+        },
+        "name": "MwsAllergyIntolerance-1",
+        "description": "Example MwsAllergyIntolerance",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/MwsAllergyIntolerance-2"
+        },
+        "name": "MwsAllergyIntolerance-2",
+        "description": "Example MwsAllergyIntolerance Create request - CPN known",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/MwsAllergyIntolerance-3"
+        },
+        "name": "MwsAllergyIntolerance-3",
+        "description": "Example MwsAllergyIntolerance, where the recorder does not have a CPN",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/MwsAllergyIntolerance-4"
+        },
+        "name": "MwsAllergyIntolerance-4",
+        "description": "Example MwsAllergyIntolerance Update request",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "Bundle/AI123456"
+        },
+        "name": "MwsAllergyIntoleranceBundle-1",
+        "description": "Example MwsAllergyIntolerance search response",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "AllergyIntolerance/13831"
+        },
+        "name": "MwsAllergyIntoleranceLegacy-1",
+        "description": "Example MwsAllergyIntolerance legacy (uncoded)",
+        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/MWSCapabilityStatement"
+        },
+        "name": "MWSCapabilityStatement",
+        "description": "MWS FHIR Capabilities",
         "exampleBoolean": false
       },
       {
@@ -71,53 +126,6 @@
         "name": "Mws_attester",
         "description": "The practitioner that set the current verificationStatus",
         "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "AllergyIntolerance/13831"
-        },
-        "name": "MwsAllergyIntoleranceLegacy-1",
-        "description": "Example MwsAllergyIntolerance legacy (uncoded)",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
-      },
-      {
-        "reference": {
-          "reference": "Bundle/AI123456"
-        },
-        "name": "MwsAllergyIntoleranceBundle-1",
-        "description": "Example MwsAllergyIntolerance search response",
-        "exampleBoolean": true
-      },
-      {
-        "reference": {
-          "reference": "AllergyIntolerance/AI667788899"
-        },
-        "name": "MwsAllergyIntolerance-1",
-        "description": "Example MwsAllergyIntolerance",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
-      },
-      {
-        "reference": {
-          "reference": "CapabilityStatement/MWSCapabilityStatement"
-        },
-        "name": "MWSCapabilityStatement",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "AllergyIntolerance/MwsAllergyIntolerance-2"
-        },
-        "name": "MwsAllergyIntolerance-2",
-        "description": "Example MwsAllergyIntolerance Create request",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
-      },
-      {
-        "reference": {
-          "reference": "AllergyIntolerance/MwsAllergyIntolerance-3"
-        },
-        "name": "MwsAllergyIntolerance-3",
-        "description": "Example MwsAllergyIntolerance, where the recorder does not have a CPN",
-        "exampleCanonical": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
       }
     ],
     "page": {
@@ -148,6 +156,11 @@
         {
           "nameUrl": "createAllergyIntolerance.html",
           "title": "Create Allergy Intolerance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "deleteLegacyMedicalWarning.html",
+          "title": "Delete Legacy Medical Warning",
           "generation": "markdown"
         },
         {
@@ -191,8 +204,18 @@
           "generation": "markdown"
         },
         {
+          "nameUrl": "SearchAllergyIntoleranceComplianceTesting.html",
+          "title": "Search Allergy Intolerance Compliance Testing",
+          "generation": "markdown"
+        },
+        {
           "nameUrl": "terminology.html",
           "title": "Terminology",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "updateAllergyIntolerance.html",
+          "title": "Update Allergy Intolerance",
           "generation": "markdown"
         }
       ]
