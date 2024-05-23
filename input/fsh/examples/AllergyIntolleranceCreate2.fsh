@@ -3,8 +3,8 @@ InstanceOf: AllergyIntolerance
 Description: "Example MwsAllergyIntolerance, where the recorder does not have a CPN"
 Usage: #example
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
-* contained[0] = recorder
-* contained[+] = patient
+* contained[0] = recorder2
+* contained[+] = patient2
 * code = $sct#227215000
 * clinicalStatus = $allergyintolerance-clinical#active
 * category = #food
@@ -15,7 +15,7 @@ Usage: #example
 * reaction.id = "1"
 * reaction.manifestation = $sct#21522001
 
-Instance: recorder
+Instance: recorder2
 InstanceOf: PractitionerRole
 Usage: #inline
 * organization = Reference(Organization/GZZ999-J)
@@ -24,7 +24,7 @@ Usage: #inline
 * practitioner.identifier.value = "my-local-practionerid-1234"
 * practitioner.display = "Mrs. TestOne Medical"
 
-Instance: patient
+Instance: patient2
 InstanceOf: Patient
 Usage: #inline
 * meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsPatient"

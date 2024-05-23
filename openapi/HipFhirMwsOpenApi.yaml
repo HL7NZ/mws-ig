@@ -2,7 +2,7 @@ openapi: "3.0.1"
 info:
   title: "HIP NES FHIR"
   description: "Te Whatu Ora Enrolment and Entitlement FHIR services"
-  version: "1.0.0"
+  version: "1.0.4"
 servers:
   - url: "https://gb2r96qpik.execute-api.ap-southeast-2.amazonaws.com/{basePath}"
     variables:
@@ -132,6 +132,24 @@ paths:
       parameters:
         - name: "patient"
           in: "query"
+          schema:
+            type: "string"
+        - name: "userid"
+          in: "header"
+          required: true
+          schema:
+            type: "string"
+        - name: "X-correlation-ID"
+          in: "header"
+          schema:
+            type: "string"
+        - name: "x-api-key"
+          in: "header"
+          required: true
+          schema:
+            type: "string"
+        - name: "X-Request-Id"
+          in: "header"
           schema:
             type: "string"
       responses:
@@ -1450,9 +1468,29 @@ components:
         display:
           $ref: "#/components/schemas/string"
         identifier:
-          $ref: "#/components/schemas/string"
-        type:
-          $ref: "#/components/schemas/uri"
+          type: "object"
+          properties:
+            period:
+              $ref: "#/components/schemas/Period"
+            system:
+              $ref: "#/components/schemas/uri"
+            value:
+              $ref: "#/components/schemas/string"
+            use:
+              type: "string"
+              description: "The purpose of this identifier."
+              enum:
+                - "usual"
+                - "official"
+                - "temp"
+                - "nickname"
+                - "anonymous"
+                - "old"
+                - "maiden"
+            id:
+              $ref: "#/components/schemas/string"
+            type:
+              $ref: "#/components/schemas/CodeableConcept"
       additionalProperties: false
       description: "A reference from one resource to another."
     ParameterMatchResource:
@@ -1690,10 +1728,7 @@ components:
           enum:
             - "Coverage"
         status:
-          type: "string"
-          enum:
-            - "active"
-            - "cancelled"
+          $ref: "#/components/schemas/RestrictedString"
         contained:
           type: "array"
           items:
@@ -1745,7 +1780,12 @@ components:
       type: "string"
       description: "String of characters used to identify a name or a resource"
     RestrictedString:
+      description: "restricted character string"
       pattern: "^([a-zA-Z0-9'\\s\\.\\-\\/,])+$"
+      type: "string"
+    RestrictedString2:
+      description: "restricted character string allows macrons"
+      pattern: "^([a-zA-Z0-9'\\s\\.\\-\\/,āēīōūĀĒĪŌŪ])+$"
       type: "string"
     SetAddressRequest:
       required:
@@ -1902,6 +1942,8 @@ components:
           items:
             anyOf:
               - $ref: "#/components/schemas/Reference"
+              - $ref: "#/components/schemas/NesPractitionerRole"
+              - $ref: "#/components/schemas/Patient"
         extension:
           type: array
           items:
@@ -1974,10 +2016,13 @@ components:
           description: The source of the information about the allergy that is recorded.
           $ref: "#/components/schemas/Reference"
         note:
+          type: array
           description: Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.
           items:
-            $ref: "#/components/schemas/string"
-          type: array
+            type: object
+            properties:
+              text:
+                $ref: "#/components/schemas/RestrictedString2"
         reaction:
           description: Details about each adverse reaction event linked to exposure to the identified substance.
           items:
