@@ -117,6 +117,6 @@ Severity: #error
 
 
 Invariant: NOTE-ALLOWED-CHARS
-Expression: "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,\u0101\u0113\u012b\u014d\u016b\u0100\u0112\u012a\u014c\u016a])*$'))"
-Description: "character restrictions for system url"
+Expression: "AllergyIntolerance.note.text.all(matches('^.*\\u003c|\\u003e|\\u0022|\\u0027.*$').not())"
+Description: "character restrictions for system notes -excluding  special characters which may be used for xss "
 Severity: #error

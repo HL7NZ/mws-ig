@@ -1,22 +1,10 @@
 {
   "resourceType": "StructureDefinition",
   "id": "MwsAllergyIntolerance",
-  "extension": [
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
-      "valueString": "Clinical.Summary"
-    },
-    {
-      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
-      "valueCode": "patient"
-    }
-  ],
   "url": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance",
-  "version": "1.0.0-SNAPSHOT",
   "name": "MwsAllergyIntolerance",
   "title": "MwsAllergyIntolerance",
   "status": "active",
-  "description": "Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -177,8 +165,8 @@
           {
             "key": "NOTE-ALLOWED-CHARS",
             "severity": "error",
-            "human": "character restrictions for system url",
-            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
+            "human": "character restrictions for system url alphanumeric, plus Maori macron and special characters []();:,.+?/-'& ",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/;:,āēīōūĀĒĪŌŪ\\u005b\\u005d\\u0028\\u0029\\u0026\\u003f\\u002b])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ],
@@ -595,7 +583,7 @@
         "isSummary": true,
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-clinical-status"
         },
         "mapping": [
           {
@@ -1506,7 +1494,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
+          "valueSet": "http://snomed.info/sct/21000210109/version/20240401?fhir_vs=refset%2F351000210106"
         },
         "mapping": [
           {
@@ -1793,8 +1781,8 @@
           {
             "key": "NOTE-ALLOWED-CHARS",
             "severity": "error",
-            "human": "character restrictions for system url",
-            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/,])*$'))",
+            "human": "character restrictions for system url alphanumeric, plus Maori macron and special characters []();:,.+?/-'& ",
+            "expression": "AllergyIntolerance.note.text.all(matches('^([-a-zA-Z0-9\\' \\t\\r\\n.\\/;:,āēīōūĀĒĪŌŪ\\u005b\\u005d\\u0028\\u0029\\u0026\\u003f\\u002b])*$'))",
             "source": "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
           }
         ]
@@ -1828,7 +1816,7 @@
         "short": "active | inactive",
         "binding": {
           "strength": "required",
-          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-allergyintolerance-clinical"
+          "valueSet": "https://nzhts.digital.health.nz/fhir/ValueSet/mws-clinical-status"
         }
       },
       {
@@ -1932,7 +1920,7 @@
         "max": "50",
         "binding": {
           "strength": "required",
-          "valueSet": "http://snomed.info/sct/21000210109/version/20231001?fhir_vs=refset%2F351000210106"
+          "valueSet": "http://snomed.info/sct/21000210109/version/20240401?fhir_vs=refset%2F351000210106"
         }
       },
       {
