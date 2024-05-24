@@ -118,5 +118,5 @@ Severity: #error
 
 Invariant: NOTE-ALLOWED-CHARS
 Expression: "AllergyIntolerance.note.text.all(matches('^.*\\u003c|\\u003e|\\u0022|\\u0027.*$').not())"
-Description: "character restrictions for system notes -excluding  special characters 2hcih may be used for xss "
+Description: "character restrictions for system notes -excluding  special characters which may be used for xss "
 Severity: #error
