@@ -6,8 +6,8 @@
 
 
 	<properties>
-		<revision>1.0.5</revision>
-		<fhir-common.version>1.8.3</fhir-common.version>
+		<revision>1.0.6-SNAPSHOT</revision>
+		<fhir-common.version>1.8.4</fhir-common.version>
 		<nhi-ig-version>1.4.2</nhi-ig-version>
 		<hpi-ig-version>1.2.0</hpi-ig-version>
 		
