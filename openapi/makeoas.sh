@@ -26,7 +26,7 @@ ig_version=$(getPomProperty "revision")
 echo "ig_version = $ig_version"
  
 cp "./fhir_packages/hip-fhir-common-$common_version/openapi/HipFhirCommonOpenApi.yaml" ./openapi/$IG_FILENAME.yaml
-
+cat ./openapi/$IG_FILENAME.yaml
 #add the MWS paths to the common openapi spec
 newpath=$(< ./openapi/$PATHS_FILENAME)  yq -i '.paths=env(newpath) ' openapi/$IG_FILENAME.yaml 
 newversion=$(yq '.version' ./sushi-config.yaml)   yq -i '.info.version=env(newversion) ' openapi/$IG_FILENAME.yaml
@@ -34,8 +34,8 @@ newversion=$(yq '.version' ./sushi-config.yaml)   yq -i '.info.version=env(newve
 yq -i 'del(.paths[][].x-amazon-apigateway-integration)' openapi/$IG_FILENAME.yaml
 yq -i 'del(.paths[][].x-amazon-apigateway-request-validator)' openapi/$IG_FILENAME.yaml
 
-yq -i '.info.title="HIP NES FHIR"'  openapi/$IG_FILENAME.yaml
-yq -i '.info.description="Te Whatu Ora Enrolment and Entitlement FHIR services"'  openapi/$IG_FILENAME.yaml
+yq -i '.info.title="HIP MWS FHIR"'  openapi/$IG_FILENAME.yaml
+yq -i '.info.description="Te Whatu Ora Medical Warnings FHIR services"'  openapi/$IG_FILENAME.yaml
 version=$ig_version  yq -i '.info.version = env(version)'  openapi/$IG_FILENAME.yaml
 
 zip -u ./input/extra/$IG_FILENAME.zip ./openapi/$IG_FILENAME.yaml
