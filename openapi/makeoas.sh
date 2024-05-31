@@ -34,8 +34,8 @@ newversion=$(yq '.version' ./sushi-config.yaml)   yq -i '.info.version=env(newve
 yq -i 'del(.paths[][].x-amazon-apigateway-integration)' openapi/$IG_FILENAME.yaml
 yq -i 'del(.paths[][].x-amazon-apigateway-request-validator)' openapi/$IG_FILENAME.yaml
 
-yq -i '.info.title="HIP NES FHIR"'  openapi/$IG_FILENAME.yaml
-yq -i '.info.description="Te Whatu Ora Enrolment and Entitlement FHIR services"'  openapi/$IG_FILENAME.yaml
+yq -i '.info.title="HIP MWS FHIR"'  openapi/$IG_FILENAME.yaml
+yq -i '.info.description="Te Whatu Ora Medical Warnings FHIR services"'  openapi/$IG_FILENAME.yaml
 version=$ig_version  yq -i '.info.version = env(version)'  openapi/$IG_FILENAME.yaml
 
 zip -u ./input/extra/$IG_FILENAME.zip ./openapi/$IG_FILENAME.yaml
