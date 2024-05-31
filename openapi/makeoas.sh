@@ -38,4 +38,6 @@ yq -i '.info.title="HIP MWS FHIR"'  openapi/$IG_FILENAME.yaml
 yq -i '.info.description="Te Whatu Ora Medical Warnings FHIR services"'  openapi/$IG_FILENAME.yaml
 version=$ig_version  yq -i '.info.version = env(version)'  openapi/$IG_FILENAME.yaml
 
-zip -u ./input/extra/$IG_FILENAME.zip ./openapi/$IG_FILENAME.yaml
+#recreate an empty zip file
+
+zip -r ./input/extra/$IG_FILENAME.zip ./openapi/$IG_FILENAME.yaml
