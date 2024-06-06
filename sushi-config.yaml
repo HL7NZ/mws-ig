@@ -28,7 +28,7 @@ dependencies:
     #version: 1.2.0
     uri: https://common-ig.hip.digital.health.nz/site
     #uri: https://dev.d3ox9vcqia2rpj.amplifyapp.com/site
-    version: 1.8.4
+    version: 1.8.6
     #version: dev
     
    
