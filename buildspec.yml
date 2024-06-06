@@ -57,8 +57,9 @@ phases:
       - cat pom.xml    
       - cat /root/.m2/settings.xml
       - mvn deploy 
-      - echo checking in full-ig.zip
+      - echo checking in full-ig.zip and openaopi
       - git add -f ./output/full-ig.zip
+      - git add -f ./input/extra/HipFhirMwsOpenApi.zip
       - git commit -m "new IG build"
       - git push
       
