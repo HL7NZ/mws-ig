@@ -24,6 +24,8 @@ PATHS_FILENAME=HipFhirMwsPaths.yaml
 common_version=$(getPomProperty "fhir-common.version")
 ig_version=$(getPomProperty "revision")
 echo "ig_version = $ig_version"
+
+rm  openapi/$IG_FILENAME.yaml
  
 cp "./fhir_packages/hip-fhir-common-$common_version/openapi/HipFhirCommonOpenApi.yaml" ./openapi/$IG_FILENAME.yaml
 cat ./openapi/$IG_FILENAME.yaml
