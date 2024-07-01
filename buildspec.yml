@@ -50,7 +50,7 @@ phases:
       # unpackage dependancy conformance artifact zips
       - mvn validate
       - echo building IG
-      mod +x ./build-ig-cicd.sh     
+      - chmod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
        # deploy the mws conformance artifacts 
       
