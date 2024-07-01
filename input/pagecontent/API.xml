@@ -12,22 +12,22 @@
 <tr>
 <td>read</td>
 <td>GET</td>
-<td>[base]/AllergyIntoleranc/[id]</td>
-<td>Used to retrieve a Patient's AllergyIntolerances</td>
+<td>[base]/AllergyIntolerance/[id]</td>
+<td>retrieve an AllergyIntolerance</td>
 <td> system/AllergyIntolerance.r</td>
 </tr>
 <tr>
 <td>create</td>
 <td>POST</td>
 <td>[base]/AllergyIntolerance</td>
-<td> create a new AllergyIntolerances</td>
+<td> create a new AllergyIntolerance</td>
 <td> system/AllergyIntolerance.c</td>
 </tr>
 <tr>
 <td>search-type</td>
 <td>GET</td>
 <td>[base]/AllergyIntolerance</td>
-<td> search for AllergyIntolerances</td>
+<td> search for a Patient's  AllergyIntolerances</td>
 <td> system/AllergyIntolerance.s</td>
 </tr>
 <tr>
@@ -37,6 +37,13 @@
 <td> update an existing AllergyIntolerance</td>
 <td> system/AllergyIntolerance.u</td>
 </tr>
+<tr>
+<td>delete</td>
+<td>DELETE</td>
+<td>[base]/AllergyIntolerance/[id]</td>
+<td> delete  an existing legacy AllergyIntolerance</td>
+<td> system/AllergyIntolerance.d</td>
+</tr>
 </table>
 <strong>Search Parameters</strong>
 <table class='table table-bordered table-condensed'>
@@ -45,6 +52,12 @@
 <td>patient</td>
 <td><a target='_blank' href="http://hl7.org/fhir/search.html#string">string</a></td>
 <td><p>NHI-Id</p>
+</td>
+</tr>
+<tr>
+<td>category</td>
+<td><a target='_blank' href="http://hl7.org/fhir/search.html#token">token</a></td>
+<td><p>food, medication, environment or biologic</p>
 </td>
 </tr>
 </table>

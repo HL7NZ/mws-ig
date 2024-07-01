@@ -6,7 +6,12 @@
 <tr>
 <td><a href='StructureDefinition-MwsAllergyIntolerance.html'>MwsAllergyIntolerance</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance</td>
-<td><p>Restricts AllergyIntolerance to the elements needed to describe an MWS record classified as ALLERGY or DRUG</p></td>
+<td>undefined</td>
+</tr>
+<tr>
+<td><a href='StructureDefinition-MwsPatient.html'>MwsPatient</a></td>
+<td>http://hl7.org.nz/fhir/StructureDefinition/MwsPatient</td>
+<td><p>A minimal profile of NzPatient, containing just enough information to validate a patient&#39;s NHI for the purposes of MWS</p></td>
 </tr>
 </table>
 </div>

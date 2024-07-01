@@ -28,7 +28,13 @@
         <a href="searchAllergyIntolerance.html">Search AllergyIntolerance</a>
       </li>
       <li>
-        <a href="createAllergyIntolerance.html">Create</a>
+        <a href="createAllergyIntolerance.html">Create AllergyIntolerance</a>
+      </li>
+      <li>
+        <a href="updateAllergyIntolerance.html">Update AllergyIntolerance</a>
+      </li>
+      <li>
+        <a href="deleteLegacyMedicalWarning.html">Delete Legacy Medical Warning</a>
       </li>
     </ul>
   </li>
@@ -58,6 +64,9 @@
     <ul class="dropdown-menu">
       <li>
         <a href="ComplianceTestingImportantInformation.html">Compliance testing important information</a>
+      </li>
+      <li>
+        <a href="SearchAllergyIntoleranceComplianceTesting.html">Search AllergyIntolerance Compliance Testing</a>
       </li>
     </ul>
   </li>

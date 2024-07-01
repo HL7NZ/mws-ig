@@ -21,14 +21,5 @@
 <td><p>The practitioner that set the current verificationStatus</p></td>
 <td></td>
 </tr>
-<tr>
-<td><a href='StructureDefinition-mws-legacy-description.html'>mws-legacy-description</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/mws-legacy-description</td>
-<td>
-<div>AllergyIntolerance</div>
-</td>
-<td><p>Describes the allergy or intolerance in a format which can be consumed by SOAP and HL7 v2 APIs</p></td>
-<td></td>
-</tr>
 </table>
 </div>
