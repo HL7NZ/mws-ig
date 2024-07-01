@@ -5,8 +5,13 @@ The MWS IG repository holds the source code or generating the MWS (Medical Warni
 
 ## Release History
 4/10/2024 - v1.0.0 initial release
+
 23/4/2024 - v1.0.2
+
 24/4/2024 - v1.0.3
+
 24/4/2024 - v1.0.4
+
 24/5/2024 - v1.0.5 NHIUPG-5883 changed to a blacklist for the notes.txt constraint
-4/6/2024  - v1.0.6 NHIUPG-5883 switch to hfc-1.85 to fix OAS
+
+6/6/2024  - v1.0.6 NHIUPG-5883 switch to hfc-1.85 to fix OAS
