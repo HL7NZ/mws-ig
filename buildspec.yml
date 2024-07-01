@@ -39,23 +39,21 @@ phases:
      
   build:
     commands:
-      - ls 
+     
       - rm -r -f ./mws-ig 
       - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/mws-ig     
       - cd mws-ig
       - git checkout $BRANCH
-      - ls
+     
       - echo getting dependencies
       #- mvn package -ntp
       # unpackage dependancy conformance artifact zips
       - mvn validate
       - echo building IG
-      - ls -l
-      - sudo chmod +x ./build-ig-cicd.sh     
+      mod +x ./build-ig-cicd.sh     
       - ./build-ig-cicd.sh 2>&1 | tee build-ig.log
        # deploy the mws conformance artifacts 
-      - cat pom.xml    
-      - cat /root/.m2/settings.xml
+      
       - mvn deploy 
       - echo checking in full-ig.zip and openaopi
       - git add -f ./output/full-ig.zip
