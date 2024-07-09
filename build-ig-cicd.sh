@@ -102,6 +102,7 @@ chmod +x ./localscripts/makeTerminologySummary.js
 echo "Making API summary"
 chmod +x ./localscripts/makeCapabilityStatement.js
 ./localscripts/makeCapabilityStatement.js mws
+chmod +x ./localscripts/makeProfilesAndExtensions.js
 ./localscripts/makeProfilesAndExtensions.js
 pwd
 
