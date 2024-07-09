@@ -15,3 +15,4 @@ The MWS IG repository holds the source code or generating the MWS (Medical Warni
 24/5/2024 - v1.0.5 NHIUPG-5883 changed to a blacklist for the notes.txt constraint
 
 6/6/2024  - v1.0.6 NHIUPG-5883 switch to hfc-1.85 to fix OAS
+9/7/2024  - v1.0.7 - removed auth from metadata endpoint
