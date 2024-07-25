@@ -6,11 +6,11 @@
 
 ##### To the test environment:
 
-Health professionals, agencies governed by the Health Information Privacy Code (HIPC) and their software vendors will be given access to the Medical Warnings Service (MWS) in the Health Identity Platform (HIP) Compliance environment for testing and training after completing the on-boarding process described below.
+Health Practitioners providing healthcare in relation to the prescribing and dispensing medications, or the recording, treatment or diagnosis of allergies or the risk of adverse drug reactions, this includes administrators recording warnings on behalf of practitioners and their software vendors, will be given access to the Medical Warnings Service (MWS) in the Health Identity Platform (HIP) Compliance environment for testing and training after completing the on-boarding process described below.
 
 ##### To the production environment:
 
-Access to the MWS is available to Health professionals and agencies governed by the Health Information Privacy Code (HIPC).
+Health Practitioners providing healthcare in relation to the prescribing and dispensing medications, or the recording, treatment or diagnosis of allergies or the risk of adverse drug reactions, this includes administrators recording warnings on behalf of practitioners.
 
 Each organisation and user that has access to the MWS accepts their obligations under the Privacy Act 1993 and the Health Information Privacy Code 1994 to only access information about patients they are treating and are authorised to do so.  
 
