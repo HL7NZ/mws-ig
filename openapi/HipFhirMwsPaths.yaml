@@ -1,4 +1,4 @@
-  /fhir/nhi/mws/metadata:
+  /fhir/mws/v1/metadata:
     get:
       summary: "Returns the server's capability statement"
       operationId: "mwsMetadata"
