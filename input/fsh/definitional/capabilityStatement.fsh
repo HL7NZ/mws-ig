@@ -46,3 +46,33 @@ Usage: #definition
 
 * rest.resource[=].interaction[+].code = #delete
 * rest.resource[=].interaction[=].documentation = "DELETE,[base]/AllergyIntolerance/[id], delete  an existing legacy AllergyIntolerance, system/AllergyIntolerance.d"
+
+
+* rest.resource[+].type = #MedicationDispense
+* rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
+* rest.resource[=].interaction[+].code = #search-type
+
+
+* rest.resource[=].searchParam[0].name = "copayment"
+* rest.resource[=].searchParam[0].type = #token
+* rest.resource[=].searchParam[0].documentation = "food, medication, environment or biologic"
+
+
+
+
+Instance:   CoPaymentYtdSearchParameter
+InstanceOf: SearchParameter
+Title:        "search for co-payments in the  current year"
+Description: "co-payments during the current PSC year"
+Usage: #definition
+
+
+* url = "http://hl7.org.nz/fhir/StructureDefinition/CoPaymentCountSearchParameter"
+* name = "copayment_ytd"
+
+* status = #draft
+* description = "returns count of co-payments during the current PSC year"
+* code = #copayment_ytd
+* base = #MedicationDispense
+* type = #token
+
