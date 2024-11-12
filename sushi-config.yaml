@@ -10,7 +10,7 @@
 
 id: hl7.org.nz.fhir.ig.mws
 canonical: http://hl7.org.nz/fhir/ig/mws
-version: 1.0.9-SNAPSHOT
+version: 1.0.9
 name: NewZealandMWSIG
 title: New Zealand MWS IG
 status: active
