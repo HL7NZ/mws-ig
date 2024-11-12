@@ -53,11 +53,14 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 
 
-* rest.resource[=].searchParam[0].name = "copayment"
+* rest.resource[=].searchParam[0].name = "copayment_claims_ytd"
 * rest.resource[=].searchParam[0].type = #token
 * rest.resource[=].searchParam[0].documentation = "food, medication, environment or biologic"
 
 
+* rest.resource[=].searchParam[+].name = "patient"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+* rest.resource[=].searchParam[=].type = #reference
 
 
 Instance:   CoPaymentYtdSearchParameter
@@ -68,11 +71,12 @@ Usage: #definition
 
 
 * url = "http://hl7.org.nz/fhir/StructureDefinition/CoPaymentCountSearchParameter"
-* name = "copayment_ytd"
+* name = "copayment_claims_ytd"
 
 * status = #draft
-* description = "returns count of co-payments during the current PSC year"
-* code = #copayment_ytd
+* description = "if true returns count of co-payment claims during the current PSC year"
+* code = #copayment_claims_ytd
 * base = #MedicationDispense
 * type = #token
+
 

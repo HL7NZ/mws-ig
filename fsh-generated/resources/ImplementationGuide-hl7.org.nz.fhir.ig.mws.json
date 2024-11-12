@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.mws",
   "url": "http://hl7.org.nz/fhir/ig/mws/ImplementationGuide/hl7.org.nz.fhir.ig.mws",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "name": "NewZealandMWSIG",
   "title": "New Zealand MWS IG",
   "status": "active",
@@ -34,12 +34,20 @@
     {
       "packageId": "hl7.org.nz.fhir.ig.hip-core",
       "uri": "https://common-ig.hip.digital.health.nz/site",
-      "version": "1.8.6",
+      "version": "1.8.9",
       "id": "hl7_org_nz_fhir_ig_hip_core"
     }
   ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "Bundle/MD11223344"
+        },
+        "name": "MedicationDispenceBundle-1",
+        "description": "Example MedicationDispenceBundle copayment_claims_ytd search response",
+        "exampleBoolean": true
+      },
       {
         "reference": {
           "reference": "StructureDefinition/MwsPatient"
@@ -125,6 +133,14 @@
         },
         "name": "Mws_attester",
         "description": "The practitioner that set the current verificationStatus",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/CoPaymentYtdSearchParameter"
+        },
+        "name": "search for co-payments in the  current year",
+        "description": "co-payments during the current PSC year",
         "exampleBoolean": false
       }
     ],
