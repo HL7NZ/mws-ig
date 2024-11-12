@@ -51,6 +51,7 @@ Usage: #definition
 * rest.resource[+].type = #MedicationDispense
 * rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
 * rest.resource[=].interaction[+].code = #search-type
+* rest.resource[=].interaction[=].documentation = "GET,[base]/MedicationDispense,retrieve MedicationDispense co-payements , system/MedicationDispense.s"
 
 
 * rest.resource[=].searchParam[0].name = "copayment_claims_ytd"
