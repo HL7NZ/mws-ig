@@ -38,8 +38,6 @@
 			<type>zip</type>
 		</dependency>
 
-
-
 		<dependency>
 			<groupId>nz.health.digital.com.fhir</groupId>
 			<artifactId>nzbase-conformance-module</artifactId>

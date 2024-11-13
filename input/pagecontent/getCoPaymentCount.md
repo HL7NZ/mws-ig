@@ -6,7 +6,7 @@
 
 Get the count of co-payment claims for the given NHIs in the PSC year-to-date
 <div>
-{% include get_copayment_claims..svg %}
+{% include get_copayment_claims.svg %}
 </div>
 
 

@@ -61,4 +61,32 @@
 </td>
 </tr>
 </table>
+<a name="MedicationDispense"> </a>
+<h5>MedicationDispense</h5>
+<strong>Interactions</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='10%'>Name</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='50%'>Documentation</th><th width='10%'>Scope</th></tr>
+<tr>
+<td>search-type</td>
+<td>GET</td>
+<td>[base]/MedicationDispense</td>
+<td>retrieve MedicationDispense co-payements </td>
+<td> system/MedicationDispense.s</td>
+</tr>
+</table>
+<strong>Search Parameters</strong>
+<table class='table table-bordered table-condensed'>
+<tr><th width='30%'>Name</th><th>Type</th><th width='70%'>Documentation</th></tr>
+<tr>
+<td>copayment_claims_ytd</td>
+<td><a target='_blank' href="http://hl7.org/fhir/search.html#token">token</a></td>
+<td><p>food, medication, environment or biologic</p>
+</td>
+</tr>
+<tr>
+<td>patient</td>
+<td><a target='_blank' href="http://hl7.org/fhir/search.html#reference">reference</a></td>
+<td><div>Definition: http://hl7.org/fhir/SearchParameter/clinical-patient</div></td>
+</tr>
+</table>
 </div>
