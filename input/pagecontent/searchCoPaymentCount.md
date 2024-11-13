@@ -11,7 +11,7 @@ Get the count of co-payments for the given NHIs in the PSC year-to-date
 
 
 
-####  Get Year-to-date Co-payments for Whanau by ID processing steps:
+####  Get Year-to-date Co-payments for Whanau processing steps:
 
 1. The pharmacist supplies the list of NHIs which constitute the family
 2. The integrating application sends an HTTP GET request for the count of co-payments for the given NHIs over the PSC year-to-date
@@ -22,7 +22,7 @@ Get the count of co-payments for the given NHIs in the PSC year-to-date
 
 
 ####  Get Get Year-to-date Co-payments for Whanau Response Example 
-[get-Co-payment-response](Bundle-MD11223344.json.html)
+[search co-payment response](Bundle-MD11223344.json.html)
 
 
 <h4>Get Get Year-to-date Co-payments for Whanau - Business Rules and Errors</h4>

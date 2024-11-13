@@ -4,9 +4,9 @@ skinparam roundcorner 5
 skinparam maxmessagesize 180
 skinparam sequenceParticipant bold
 title Get Year To Date co-payment claims for NHIs
-participant "FHIR Client" as A #CornflowerBlue
+participant "MwsMedicationDispense Client" as A #CornflowerBlue
 participant "MWS Service " as B #CornflowerBlue
-participant "MWS FHIR database" as C #CornflowerBlue
+participant "Claims database" as C #CornflowerBlue
 
 A -> B: GET [base]/MwsMedicationDispense?patient=YNS4214,ZSY0175&copayment_ytd=true&_total=accurate
 B -> B: Validate
