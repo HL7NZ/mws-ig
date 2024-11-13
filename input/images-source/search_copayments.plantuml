@@ -8,7 +8,7 @@ participant "MwsMedicationDispense Client" as A #CornflowerBlue
 participant "MWS Service " as B #CornflowerBlue
 participant "Claims database" as C #CornflowerBlue
 
-A -> B: GET [base]/MwsMedicationDispense?patient=YNS4214,ZSY0175&copayment_ytd=true&_total=accurate
+A -> B: GET [base]/MedicationDispense?patient=YNS4214,ZSY0175&copayment_ytd=true&_total=accurate
 B -> B: Validate
 B -> C: query
 C -[dashed]-> B:
