@@ -53,6 +53,7 @@ menu:
     Create AllergyIntolerance: createAllergyIntolerance.html
     Update AllergyIntolerance: updateAllergyIntolerance.html
     Delete Legacy Medical Warning: deleteLegacyMedicalWarning.html
+    Search Co-payments: searchCoPaymentCount.html
 
   Important information:
     Onboarding: Onboarding.html
