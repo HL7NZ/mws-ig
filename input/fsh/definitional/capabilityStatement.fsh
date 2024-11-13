@@ -48,36 +48,3 @@ Usage: #definition
 * rest.resource[=].interaction[=].documentation = "DELETE,[base]/AllergyIntolerance/[id], delete  an existing legacy AllergyIntolerance, system/AllergyIntolerance.d"
 
 
-* rest.resource[+].type = #MedicationDispense
-* rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
-* rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[=].documentation = "GET,[base]/MedicationDispense,retrieve MedicationDispense co-payements , system/MedicationDispense.s"
-
-
-* rest.resource[=].searchParam[0].name = "copayment_claims_ytd"
-* rest.resource[=].searchParam[0].type = #token
-* rest.resource[=].searchParam[0].documentation = "food, medication, environment or biologic"
-
-
-* rest.resource[=].searchParam[+].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
-* rest.resource[=].searchParam[=].type = #reference
-
-
-Instance:   CoPaymentYtdSearchParameter
-InstanceOf: SearchParameter
-Title:        "search for co-payments in the  current year"
-Description: "co-payments during the current PSC year"
-Usage: #definition
-
-
-* url = "http://hl7.org.nz/fhir/StructureDefinition/CoPaymentCountSearchParameter"
-* name = "copayment_claims_ytd"
-
-* status = #draft
-* description = "if true returns count of co-payment claims during the current PSC year"
-* code = #copayment_claims_ytd
-* base = #MedicationDispense
-* type = #token
-
-
