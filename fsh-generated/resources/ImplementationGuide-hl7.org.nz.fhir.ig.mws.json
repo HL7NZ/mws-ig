@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.mws",
   "url": "http://hl7.org.nz/fhir/ig/mws/ImplementationGuide/hl7.org.nz.fhir.ig.mws",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "name": "NewZealandMWSIG",
   "title": "New Zealand MWS IG",
   "status": "active",
@@ -197,6 +197,11 @@
         {
           "nameUrl": "getAllergyIntolerance.html",
           "title": "Get Allergy Intolerance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "getCoPaymentCount.html",
+          "title": "Get Co Payment Count",
           "generation": "markdown"
         },
         {

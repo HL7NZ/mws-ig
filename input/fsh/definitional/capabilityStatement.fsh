@@ -56,3 +56,8 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
+
+
+* rest.resource[=].searchParam[+].name = "copayment_claims_ytd"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[=].documentation = "food, medication, environment or biologic"
