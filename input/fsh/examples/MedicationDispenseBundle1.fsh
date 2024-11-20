@@ -17,6 +17,10 @@ Usage: #example
 * entry[0].resource.subject.reference = "Patient/ZSY0175"
 * entry[0].resource.whenPrepared = "2024-09-02T14:10:27+12:00"
 
+* entry[0].resource.extension[nzeps-pharmacy-approval-original].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-pharmacy-approval-original"
+* entry[0].resource.extension[nzeps-pharmacy-approval-original].valueString = "123456"
+* entry[0].resource.extension[nzeps-scriptno-local].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-scriptno-local"
+* entry[0].resource.extension[nzeps-scriptno-local].valueString = "654321"
 
 
 * entry[1].resource.resourceType = "MedicationDispense"
@@ -27,5 +31,12 @@ Usage: #example
 
 * entry[1].resource.subject.reference = "Patient/YNS4214"
 * entry[1].resource.whenPrepared = "2024-09-01T14:10:27+12:00"
+
+* entry[1].resource.extension[nzeps-pharmacy-approval-original].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-pharmacy-approval-original"
+* entry[1].resource.extension[nzeps-pharmacy-approval-original].valueString = "667788"
+* entry[1].resource.extension[nzeps-scriptno-local].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-scriptno-local"
+* entry[1].resource.extension[nzeps-scriptno-local].valueString = 887766"
+
+
 
 
