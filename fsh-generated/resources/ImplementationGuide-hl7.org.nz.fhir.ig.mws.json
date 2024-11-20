@@ -36,6 +36,12 @@
       "uri": "https://common-ig.hip.digital.health.nz/site",
       "version": "1.8.9",
       "id": "hl7_org_nz_fhir_ig_hip_core"
+    },
+    {
+      "packageId": "hl7.org.nz.fhir.ig.mdr",
+      "uri": "https://build.fhir.org/ig/HL7NZ/mdr/branches/master",
+      "version": "1.0.0",
+      "id": "hl7_org_nz_fhir_ig_mdr"
     }
   ],
   "definition": {
@@ -121,6 +127,13 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/MwsMedicationDispense"
+        },
+        "name": "MwsMedicationDispense",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/mws-attested-date"
         },
         "name": "Mws_attestedDate",
@@ -133,14 +146,6 @@
         },
         "name": "Mws_attester",
         "description": "The practitioner that set the current verificationStatus",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "SearchParameter/CoPaymentYtdSearchParameter"
-        },
-        "name": "search for co-payments in the  current year",
-        "description": "co-payments during the current PSC year",
         "exampleBoolean": false
       }
     ],
@@ -200,11 +205,6 @@
           "generation": "markdown"
         },
         {
-          "nameUrl": "getCoPaymentCount.html",
-          "title": "Get Co Payment Count",
-          "generation": "markdown"
-        },
-        {
           "nameUrl": "glossary.html",
           "title": "Glossary",
           "generation": "markdown"
@@ -227,6 +227,11 @@
         {
           "nameUrl": "SearchAllergyIntoleranceComplianceTesting.html",
           "title": "Search Allergy Intolerance Compliance Testing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "searchCoPaymentCount.html",
+          "title": "Search Co Payment Count",
           "generation": "markdown"
         },
         {

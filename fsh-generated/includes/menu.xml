@@ -36,6 +36,9 @@
       <li>
         <a href="deleteLegacyMedicalWarning.html">Delete Legacy Medical Warning</a>
       </li>
+      <li>
+        <a href="searchCoPaymentCount.html">Search Co-payments</a>
+      </li>
     </ul>
   </li>
   <li class="dropdown">

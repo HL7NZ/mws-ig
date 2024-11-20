@@ -30,6 +30,11 @@ dependencies:
     #uri: https://dev.d3ox9vcqia2rpj.amplifyapp.com/site
     version: 1.8.9
     #version: dev
+  hl7.org.nz.fhir.ig.mdr:
+    uri: https://build.fhir.org/ig/HL7NZ/mdr/branches/master
+    version: 0.1.0
+    
+  
     
    
 fhirVersion: 4.0.1
