@@ -40,7 +40,7 @@
     {
       "packageId": "hl7.org.nz.fhir.ig.mdr",
       "uri": "https://build.fhir.org/ig/HL7NZ/mdr/branches/master",
-      "version": "1.0.0",
+      "version": "0.1.0",
       "id": "hl7_org_nz_fhir_ig_mdr"
     }
   ],
