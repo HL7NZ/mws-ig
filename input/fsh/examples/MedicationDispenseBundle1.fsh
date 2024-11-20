@@ -35,7 +35,7 @@ Usage: #example
 * entry[1].resource.extension[nzeps-pharmacy-approval-original].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-pharmacy-approval-original"
 * entry[1].resource.extension[nzeps-pharmacy-approval-original].valueString = "667788"
 * entry[1].resource.extension[nzeps-scriptno-local].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-scriptno-local"
-* entry[1].resource.extension[nzeps-scriptno-local].valueString = 887766"
+* entry[1].resource.extension[nzeps-scriptno-local].valueString = "887766"
 
 
 
