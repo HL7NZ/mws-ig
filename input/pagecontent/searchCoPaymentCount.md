@@ -21,11 +21,11 @@ Get the count of co-payments for the given NHIs in the PSC year-to-date
 
 
 
-####  Get Get Year-to-date Co-payments for Whanau Response Example 
+####  Get  Year-to-date Co-payments for Whanau Response Example 
 [search co-payment response](Bundle-MD11223344.json.html)
 
 
-<h4>Get Get Year-to-date Co-payments for Whanau - Business Rules and Errors</h4>
+<h4>Get  Year-to-date Co-payments for Whanau - Business Rules and Errors</h4>
 <table>
 <style>
 table, th, td {
@@ -53,8 +53,9 @@ table, th, td {
 <td> Cannot be found </td>
 <td> The MWS id cannot be found in MWS </td></tr>
 
-<tr><td>copayment_ytd parameter must be  true </td>
+<tr><td>copayment_ytd parameter must be true</td>
 <td> 400 Bad request </td>
 <td> EM07201 </td>
-
+<td> Missing a required field </td>
+<td> copayment_ytd parameter must be true</td></tr> 
 </table>
