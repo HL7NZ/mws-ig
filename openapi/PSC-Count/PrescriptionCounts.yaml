@@ -1,21 +1,20 @@
 openapi: '3.0.3'
 info:
-  version: '0.3.0'
+  version: '0.4.0'
   title: 'Prescription Counts API'
   description: API returning a count of the number of prescriptions dispensed for the given set of NHI numbers for the entitlement year, along with any Prescription Subsidy Card(s) if the entitlement exists
 paths:
-  /prescription-counts/{nhis}:
+  /prescription-counts:
     parameters:
       - name: nhis
-        description: List of one or more NHI numbers (separated by space %20)
-        in: path
+        description: List of one or more NHI numbers (comma separated)
+        in: query
         required: true
         schema:
           $ref: '#/components/schemas/NhiNumbers'
       - $ref: '#/components/parameters/X-correlation-ID'
-      - $ref: '#/components/parameters/X-Request-Id'
       - $ref: '#/components/parameters/userid'
-      - $ref: '#/components/parameters/request-context'
+     
     get:
       summary: Get the count of dispensed prescriptions and any PSCs issued
      
@@ -60,30 +59,14 @@ components:
       required: false
       schema:
         type: "string"
-    X-Request-Id:
-      name: "X-Request-Id"
-      in: "header"
-      required: false
-      schema:
-        type: "string"
-    x-api-key:
-      name: "x-api-key"
-      in: "header"
-      required: true
-      schema:
-        type: "string"
+   
     userid:
       name: "userid"
       in: "header"
       required: true
       schema:
         type: "string"
-    request-context:
-      name: "request-context"
-      in: "header"
-      required: true
-      schema:
-        type: "string"
+  
   
   schemas: 
    
@@ -93,10 +76,10 @@ components:
         description: "unique 7-character identification number, assigned to a patien by the Patient Index."     
         
     NhiNumbers:
-        pattern: "^[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][0-9][0-9]|[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][A-HJ-NP-Z][A-HJ-NP-Z]|%20$"
+        pattern: "^[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][0-9][0-9]|[A-HJ-NP-Z][A-HJ-NP-Z][A-HJ-NP-Z][0-9][0-9][A-HJ-NP-Z][A-HJ-NP-Z]|,"
         type: "string"
         description: " List of NHI numbers seperated by space"
-        example: "ZZZ0111%20ZZZ0112"   
+        example: "ZZZ0111,ZZZ0112"   
       
     Prescription:
       type: object
