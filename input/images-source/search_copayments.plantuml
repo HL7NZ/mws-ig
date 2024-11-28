@@ -1,0 +1,19 @@
+@startuml
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 5
+skinparam maxmessagesize 180
+skinparam sequenceParticipant bold
+title Get Year To Date co-payment claims for NHIs
+participant "Pharmacy System" as A #CornflowerBlue
+participant "MWS Service " as B #CornflowerBlue
+participant "Claims database" as C #CornflowerBlue
+
+A -> B: GET [base]/MedicationDispense?patient=YNS4214,ZSY0175&copayment_ytd=true
+B -> B: Validate
+B -> B: Add dormant NHIs
+B -> C: query
+C -[dashed]-> B:
+
+B -[dashed]-> A: MedicationDispense Bundle Response 
+
+@enduml

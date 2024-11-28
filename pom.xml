@@ -6,8 +6,8 @@
 
 
 	<properties>
-		<revision>1.0.9</revision>
-		<fhir-common.version>1.8.8</fhir-common.version>
+		<revision>1.1.0-SNAPSHOT</revision>
+		<fhir-common.version>1.8.9</fhir-common.version>
 		<nhi-ig-version>1.4.2</nhi-ig-version>
 		<hpi-ig-version>1.2.0</hpi-ig-version>
 		
@@ -37,8 +37,6 @@
 			<version>${hpi-ig-version}</version>
 			<type>zip</type>
 		</dependency>
-
-
 
 		<dependency>
 			<groupId>nz.health.digital.com.fhir</groupId>

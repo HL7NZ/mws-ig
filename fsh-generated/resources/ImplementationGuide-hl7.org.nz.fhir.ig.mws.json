@@ -2,7 +2,7 @@
   "resourceType": "ImplementationGuide",
   "id": "hl7.org.nz.fhir.ig.mws",
   "url": "http://hl7.org.nz/fhir/ig/mws/ImplementationGuide/hl7.org.nz.fhir.ig.mws",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "name": "NewZealandMWSIG",
   "title": "New Zealand MWS IG",
   "status": "active",
@@ -34,12 +34,26 @@
     {
       "packageId": "hl7.org.nz.fhir.ig.hip-core",
       "uri": "https://common-ig.hip.digital.health.nz/site",
-      "version": "1.8.6",
+      "version": "1.8.9",
       "id": "hl7_org_nz_fhir_ig_hip_core"
+    },
+    {
+      "packageId": "hl7.org.nz.fhir.ig.mdr",
+      "uri": "https://build.fhir.org/ig/HL7NZ/mdr/branches/master",
+      "version": "0.1.0",
+      "id": "hl7_org_nz_fhir_ig_mdr"
     }
   ],
   "definition": {
     "resource": [
+      {
+        "reference": {
+          "reference": "Bundle/MD11223344"
+        },
+        "name": "MedicationDispenceBundle-1",
+        "description": "Example MedicationDispenceBundle copayment_claims_ytd search response",
+        "exampleBoolean": true
+      },
       {
         "reference": {
           "reference": "StructureDefinition/MwsPatient"
@@ -109,6 +123,13 @@
         },
         "name": "MWSCapabilityStatement",
         "description": "MWS FHIR Capabilities",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/MwsMedicationDispense"
+        },
+        "name": "MwsMedicationDispense",
         "exampleBoolean": false
       },
       {
@@ -206,6 +227,11 @@
         {
           "nameUrl": "SearchAllergyIntoleranceComplianceTesting.html",
           "title": "Search Allergy Intolerance Compliance Testing",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "searchCoPaymentCount.html",
+          "title": "Search Co Payment Count",
           "generation": "markdown"
         },
         {
