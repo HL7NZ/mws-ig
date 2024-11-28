@@ -13,10 +13,10 @@ Get the count of co-payments for the given NHIs in the PSC year-to-date
 
 ####  Get Year-to-date Co-payments for Whanau processing steps:
 
-1. The pharmacist supplies the list of NHIs which constitute the family
-2. The integrating application sends an HTTP GET request for the count of co-payments for the given NHIs over the PSC year-to-date
-3. The request is validated - ALT: Validation failure. Operation Outcome resource returned
-4. The co-payments information is returned from proclaim- ALT: NHI not found. Operation Outcome resource returned<br />
+1. The pharmacist supplies the list of NHIs which constitute the family and the integrating application and sends an HTTP GET request for the count of co-payments for the given NHIs over the PSC year-to-date
+2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+3. Any dormant NHIs associated with the input NHIs are added to the list - ALT: NHI not found. Operation Outcome resource returned
+4. The count of co-payments for the list of NHIs over the PSC year to date is returned from the claims system <br />
 5. The response containing the count of co-payments is returned.
 
 
@@ -51,7 +51,13 @@ table, th, td {
 <td> 404 Not found </td>
 <td> EM02002 </td>
 <td> Cannot be found </td>
-<td> The MWS id cannot be found in MWS </td></tr>
+<td> The NHI id cannot be found  </td></tr>
+
+<tr><td> No more than 100 NHIs may be provided </td>
+<td> 400 Bad request  </td>
+<td> EM0xxxx </td>
+<td> Too many NHIs  </td>
+<td> Max of 100 NHIs may be provided</td></tr>
 
 <tr><td>copayment_ytd parameter must be true</td>
 <td> 400 Bad request </td>
