@@ -53,11 +53,11 @@ table, th, td {
 <td> Cannot be found </td>
 <td> The NHI id cannot be found  </td></tr>
 
-<tr><td> No more than 100 NHIs may be provided </td>
+<tr><td> No more than 20 NHIs may be provided </td>
 <td> 400 Bad request  </td>
 <td> EM0xxxx </td>
 <td> Too many NHIs  </td>
-<td> Max of 100 NHIs may be provided</td></tr>
+<td> Max of 20 NHIs may be provided</td></tr>
 
 <tr><td>copayment_ytd parameter must be true</td>
 <td> 400 Bad request </td>

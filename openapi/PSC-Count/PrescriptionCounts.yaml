@@ -1,6 +1,6 @@
 openapi: '3.0.3'
 info:
-  version: '0.4.0'
+  version: '0.5.0'
   title: 'Prescription Counts API'
   description: API returning a count of the number of prescriptions dispensed for the given set of NHI numbers for the entitlement year, along with any Prescription Subsidy Card(s) if the entitlement exists
 paths:
@@ -94,6 +94,8 @@ components:
         medicationCode: 
            type: string
         medicationCodeSystem:
+           type: string
+        medicationCodeDisplay:
            type: string
         nzeps-pharmacy-approval-original:
             type: string
