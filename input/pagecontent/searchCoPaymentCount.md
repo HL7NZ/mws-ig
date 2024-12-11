@@ -13,7 +13,7 @@ Get the count of co-payments for the given NHIs in the PSC year-to-date
 
 ####  Get Year-to-date Co-payments for Whanau processing steps:
 
-1. The pharmacist supplies the list of NHIs which constitute the family and the integrating application and sends an HTTP GET request for the count of co-payments for the given NHIs over the PSC year-to-date
+1. The pharmacist supplies the list of NHIs which constitute the family unit and the integrating application and sends an HTTP GET request for the count of co-payments for the given NHIs over the PSC year-to-date
 2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 3. Any dormant NHIs associated with the input NHIs are added to the list - ALT: NHI not found. Operation Outcome resource returned
 4. The count of co-payments for the list of NHIs over the PSC year to date is returned from the claims system <br />

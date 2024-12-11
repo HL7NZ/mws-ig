@@ -75,6 +75,12 @@ table, th, td {
 <td>Delete a legacy MWS record</td>
 <td><a href="deleteAllergyIntolerance.html">See Delete Legacy Medical Warning use case</a></td>
 </tr>
+
+<tr>
+<td>Medication read</td>
+<td>Get  information about a person’s medications </td>
+<td><a href="/searchCoPaymentCount.html">See Get Year-to-date Co-payments for Whanau use case</a></td>
+</tr>
 </table>
 
 
