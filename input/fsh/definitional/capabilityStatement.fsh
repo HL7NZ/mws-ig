@@ -58,6 +58,6 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 
 
-* rest.resource[=].searchParam[+].name = "copayment_ytd"
+* rest.resource[=].searchParam[+].name = "copayment_claims_ytd"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "filter on results for which a co-payment has been made"
+* rest.resource[=].searchParam[=].documentation = "food, medication, environment or biologic"

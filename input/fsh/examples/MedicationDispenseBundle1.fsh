@@ -1,6 +1,6 @@
-Instance: MedicationDispenceBundle-1
+Instance: MedicationDispenseBundle-1
 InstanceOf: Bundle
-Description: "Example MedicationDispenceBundle copayment_claims_ytd search response" 
+Description: "Example MedicationDispenseBundle copayment_claims_ytd search response" 
 Usage: #example
 
 * id = "MD11223344"
