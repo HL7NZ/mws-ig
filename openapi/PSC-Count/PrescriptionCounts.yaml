@@ -1,6 +1,6 @@
 openapi: '3.0.3'
 info:
-  version: '0.5.0'
+  version: '0.6.0'
   title: 'Prescription Counts API'
   description: API returning a count of the number of prescriptions dispensed for the given set of NHI numbers for the entitlement year, along with any Prescription Subsidy Card(s) if the entitlement exists
 paths:
@@ -24,7 +24,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PrescriptionCounts'
+                $ref: '#/components/schemas/Prescriptions'
         401:
           description: Unauthorized
           content:
@@ -84,8 +84,15 @@ components:
     Prescription:
       type: object
       properties:
-        
+        identifier:
+          description: the FHIR resource identifier fo the MedicationDispense object in MDR
+          type: string
+        status: 
+          description: must map to https://hl7.org/fhir/R4/valueset-medicationdispense-status.html
+          type: string
+                  
         whenPrepared:
+          
           type: string
           format: date
           example: "2025-02-01"
@@ -110,7 +117,7 @@ components:
         
         
             
-    PrescriptionCounts:
+    Prescriptions:
       type: object
       properties:
         prescriptionCounts:
