@@ -50,8 +50,8 @@
         "reference": {
           "reference": "Bundle/MD11223344"
         },
-        "name": "MedicationDispenceBundle-1",
-        "description": "Example MedicationDispenceBundle copayment_claims_ytd search response",
+        "name": "MedicationDispenseBundle-1",
+        "description": "Example MedicationDispenseBundle copayment_claims_ytd search response",
         "exampleBoolean": true
       },
       {
