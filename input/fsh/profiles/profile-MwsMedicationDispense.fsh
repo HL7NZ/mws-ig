@@ -19,7 +19,7 @@ Title:          "MwsMedicationDispense"
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
 
 //include in summary
-* location SU
+* location.reference SU
 * extension[nzeps-pharmacy-approval-original] SU
 * extension[nzeps-scriptno-local] SU
  
