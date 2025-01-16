@@ -16,6 +16,4 @@ The MWS IG repository holds the source code or generating the MWS (Medical Warni
 
 6/6/2024  - v1.0.6 NHIUPG-5883 switch to hfc-1.85 to fix OAS
 9/7/2024  - v1.0.7 - removed auth from metadata endpoint
-28/11/2024 - v1.1.0 PSC Count
-
-xx
+bbb
