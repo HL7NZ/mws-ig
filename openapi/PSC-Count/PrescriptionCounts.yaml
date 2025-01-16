@@ -1,6 +1,6 @@
 openapi: '3.0.3'
 info:
-  version: '0.4.0'
+  version: '0.7.0'
   title: 'Prescription Counts API'
   description: API returning a count of the number of prescriptions dispensed for the given set of NHI numbers for the entitlement year, along with any Prescription Subsidy Card(s) if the entitlement exists
 paths:
@@ -24,7 +24,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/PrescriptionCounts'
+                $ref: '#/components/schemas/Prescriptions'
         401:
           description: Unauthorized
           content:
@@ -84,31 +84,40 @@ components:
     Prescription:
       type: object
       properties:
-        
+        identifier:
+          description: the FHIR resource identifier fo the MedicationDispense object in MDR
+          type: string
+        status: 
+          description: must map to https://hl7.org/fhir/R4/valueset-medicationdispense-status.html
+          type: string
         whenPrepared:
+          description : When the prescription item is made up
           type: string
           format: date
           example: "2025-02-01"
         nhiNumber: 
+          desacription: NHI number of the person the prescription is for
           $ref: '#/components/schemas/NhiNumber'          
         medicationCode: 
+           description: NZMT code or Pharmacode of the medication being dispensed
            type: string
         medicationCodeSystem:
+           type: string
+           description: URI of the code system of the medicationCode. Must be either http://nzmt.org.nz or https://standards.digital.health.nz/ns/pharmac-subsidy-code
+        medicationCodeDisplay:
+           description: display name of the medication
            type: string
         nzeps-pharmacy-approval-original:
             type: string
         nzeps-scriptno-local:
             type: string
-      additionalProperties: false
-      required:
-        - "nhiNumber"
-        - "whenPrepared"
-        - "medicationCode"
-        - "medicationCodeSystem"
-        
-        
-            
-    PrescriptionCounts:
+            description: NZePS Local Script Number
+        location:
+          type: string
+          description : The  HPI facility id  The of the location where the dispense was performed
+          
+              
+    Prescriptions:
       type: object
       properties:
         prescriptionCounts:

@@ -51,13 +51,13 @@ Usage: #definition
 * rest.resource[+].type = #MedicationDispense
 * rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
 * rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[=].documentation = "GET,[base]/MedicationDispense,retrieve MedicationDispense co-payements , system/MedicationDispense.s"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/MedicationDispense,retrieve MedicationDispense co-payments , system/MedicationDispense.s"
 
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
 
 
-* rest.resource[=].searchParam[+].name = "copayment_ytd"
+* rest.resource[=].searchParam[+].name = "copayment_claims_ytd"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "filter on results for which a co-payment has been made"
+* rest.resource[=].searchParam[=].documentation = "food, medication, environment or biologic"

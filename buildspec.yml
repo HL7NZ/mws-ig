@@ -37,7 +37,7 @@ phases:
       - java -jar ./publisher.jar -v
       
       # get the nzeps ig
-      - sudo wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://build.fhir.org/ig/HL7NZ/mdr/branches/master/full-ig.zip &&     
+      - sudo wget -e use_proxy=yes -e https_proxy=WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128 https://fhir-ig.digital.health.nz/mdr/full-ig.zip &&     
       - unzip full-ig.zip
       - sudo mkdir -p ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.1.0
       - sudo chmod +r ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.1.0
