@@ -19,7 +19,9 @@ Title:          "MwsMedicationDispense"
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
 
 //include in summary
-* location SU
+
+//not allowed to add location to summary - ig builder error " : Base isSummary = false, derived isSummary = true"
+//* location SU
 * extension[nzeps-pharmacy-approval-original] SU
 * extension[nzeps-scriptno-local] SU
  
