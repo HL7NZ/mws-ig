@@ -1,6 +1,6 @@
 openapi: '3.0.3'
 info:
-  version: '0.7.0'
+  version: '0.8.0'
   title: 'Prescription Counts API'
   description: API returning a count of the number of prescriptions dispensed for the given set of NHI numbers for the entitlement year, along with any Prescription Subsidy Card(s) if the entitlement exists
 paths:
@@ -12,8 +12,8 @@ paths:
         required: true
         schema:
           $ref: '#/components/schemas/NhiNumbers'
-      - $ref: '#/components/parameters/X-correlation-ID'
-      - $ref: '#/components/parameters/userid'
+      - $ref: '#/components/parameters/X-Correlation-ID'
+      - $ref: '#/components/parameters/X-User-ID'
      
     get:
       summary: Get the count of dispensed prescriptions and any PSCs issued
@@ -53,17 +53,17 @@ paths:
 components:
 
   parameters:
-    X-correlation-ID:
-      name: "X-correlation-ID"
+    X-Correlation-ID:
+      name: "X-Correlation-ID"
       in: "header"
       required: false
       schema:
         type: "string"
    
-    userid:
-      name: "userid"
+    X-User-ID:
+      name: "X-User-ID"
       in: "header"
-      required: true
+      required: false
       schema:
         type: "string"
   
