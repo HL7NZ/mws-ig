@@ -9,6 +9,7 @@ Usage: #example
 * total = 2
 
 * entry[0].resource.resourceType = "MedicationDispense"
+* entry[0].resource.id = "1QH2QN6QCYKVX2Y9J2"
 * entry[0].resource.status = #completed
 * entry[0].resource.medicationCodeableConcept.coding.system = "http://nzmt.org.nz"
 * entry[0].resource.medicationCodeableConcept.coding.code = #350302831000117105
@@ -25,6 +26,7 @@ Usage: #example
 
 
 * entry[1].resource.resourceType = "MedicationDispense"
+* entry[1].resource.id = "1QH2QN70VXP9CWFVX7"
 * entry[1].resource.status = #completed
 * entry[1].resource.medicationCodeableConcept.coding.system = "http://nzmt.org.nz"
 * entry[1].resource.medicationCodeableConcept.coding.code = #50108931000117106

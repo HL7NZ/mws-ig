@@ -49,7 +49,7 @@ phases:
     commands:
      
       - rm -r -f ./mws-ig 
-      - git clone https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/mws-ig     
+      - git clone https://github.com/HL7NZ/mws-ig     
       - cd mws-ig
       - git checkout $BRANCH
      
@@ -67,7 +67,7 @@ phases:
       - git add -f ./output/full-ig.zip
       - git add -f ./input/extra/HipFhirMwsOpenApi.zip
       - git commit -m "new IG build"
-      - git push
+      - git push https://$GITUSERNAME:$GITTOKEN@github.com/HL7NZ/mws-ig 
       
 
      
