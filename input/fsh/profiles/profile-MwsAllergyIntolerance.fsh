@@ -15,6 +15,7 @@ Parent:         AllergyIntolerance
 
 Id:             MwsAllergyIntolerance
 Title:          "MwsAllergyIntolerance"
+Description:    "The AllergyIntolerance resource exposed by the MWS. This contains information related to allergy and adverse drug reactions for a patient."
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/MwsAllergyIntolerance"
 

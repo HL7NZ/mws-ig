@@ -15,6 +15,7 @@ Parent:         http://hl7.org.nz/fhir/StructureDefinition/NzepsMedicationDispen
 
 Id:             MwsMedicationDispense
 Title:          "MwsMedicationDispense"
+Description:    "The MedicationDispense resource exposed by the MWS. This contains information related to Year To Date co-payment claims for NHIs."
 
 * ^url = "http://hl7.org.nz/fhir/StructureDefinition/MwsMedicationDispense"
 
