@@ -35,6 +35,7 @@ Usage: #example
 
 * entry[1].resource.subject.reference = "Patient/YNS4214"
 * entry[1].resource.whenPrepared = "2024-09-01T14:10:27+12:00"
+* entry[1].resource.location.reference = "Location/FZZ997-J"
 
 * entry[1].resource.extension[nzeps-pharmacy-approval-original].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-pharmacy-approval-original"
 * entry[1].resource.extension[nzeps-pharmacy-approval-original].valueString = "667788"
