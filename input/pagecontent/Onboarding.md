@@ -59,21 +59,22 @@ table, th, td {
 <tr>
 <td>Drug Allergy read</td>
 <td>To allow access to get a MWS Allergy Intolerance record by mws-id, or to get a person’s MWS Allergy Intolerance records using NHI and other search parameters</td>
-<td><a href="geAllergyIntolerance..html">See Get MWS Allergy Intolerance. use case</a> <br />
+<td><a href="getAllergyIntolerance.html">See Get MWS Allergy Intolerance. use case</a> <br />
 <a href="searchAllergyIntolerance.html">See Search MWS Allergy Intolerance. use case</a> </td>
 </tr>
 
 <tr>
 <td>Drug Allergy maintain</td>
 <td>Create and update MWS Allergy Intolerance records</td>
-<td><a href="updateAllergyIntolerance.html">See Update MWS Allergy Intolerance use case</a></td>
+<td><a href="updateAllergyIntolerance.html">See Update MWS Allergy Intolerance use case</a> <br />
+<a href="createAllergyIntolerance.html">See Create MWS Allergy Intolerance. use case</a> </td>
 </tr>
 
 
 <tr>
 <td>Drug Allergy delete</td>
 <td>Delete a legacy MWS record</td>
-<td><a href="deleteAllergyIntolerance.html">See Delete Legacy Medical Warning use case</a></td>
+<td><a href="deleteLegacyMedicalWarning.html">See Delete Legacy Medical Warning use case</a></td>
 </tr>
 
 
