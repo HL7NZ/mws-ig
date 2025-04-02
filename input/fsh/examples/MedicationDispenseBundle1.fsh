@@ -23,7 +23,8 @@ Usage: #example
 * entry[0].resource.extension[nzeps-pharmacy-approval-original].valueString = "123456"
 * entry[0].resource.extension[nzeps-scriptno-local].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-scriptno-local"
 * entry[0].resource.extension[nzeps-scriptno-local].valueString = "654321"
-
+* entry[0].resource.extension[nzeps-medication-copayment-paid].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-medication-copayment-paid"
+* entry[0].resource.extension[nzeps-medication-copayment-paid].valueBoolean = true
 
 * entry[1].resource.resourceType = "MedicationDispense"
 * entry[1].resource.id = "1QH2QN70VXP9CWFVX7"
@@ -39,7 +40,5 @@ Usage: #example
 * entry[1].resource.extension[nzeps-pharmacy-approval-original].valueString = "667788"
 * entry[1].resource.extension[nzeps-scriptno-local].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-scriptno-local"
 * entry[1].resource.extension[nzeps-scriptno-local].valueString = "887766"
-
-
-
-
+* entry[1].resource.extension[nzeps-medication-copayment-paid].url = "http://hl7.org.nz/fhir/StructureDefinition/nzeps-medication-copayment-paid"
+* entry[1].resource.extension[nzeps-medication-copayment-paid].valueBoolean = true
