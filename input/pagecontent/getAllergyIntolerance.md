@@ -21,7 +21,6 @@ The Get AllergyIntolerance operation allows an authorised user to retrieve an Al
 5. The response containing the AllergyIntolerance record is returned.
 
 
-cd ../
 ####  Get AllergyIntolerance Response Example 
 [get-AllergyIntolerance-response](AllergyIntolerance-AI667788899.json.html)
 
