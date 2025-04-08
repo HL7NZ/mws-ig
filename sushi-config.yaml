@@ -32,7 +32,7 @@ dependencies:
     #version: dev
   hl7.org.nz.fhir.ig.mdr:
     uri: https://build.fhir.org/ig/HL7NZ/mdr/branches/master
-    version: 0.1.0
+    version: 0.2.0
     
   
     
