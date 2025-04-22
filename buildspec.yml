@@ -43,7 +43,7 @@ phases:
       - sudo chmod +r ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.2.0
       - tar -xf ./site/package.tgz -C ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.2.0
        # fix url - workaround for NHIUPG-7036
-      # - yq e -i '.url  = "https://fhir-ig.digital.health.nz/mdr/"' ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.2.0/package/package.json
+      - yq e -i '.url  = "https://fhir-ig.digital.health.nz/mdr/"' ~/.fhir/packages/hl7.org.nz.fhir.ig.mdr#0.2.0/package/package.json
      
       
      
