@@ -3,7 +3,7 @@ InstanceOf: Bundle
 Description: "Example MedicationDispenseBundle copayment_claims_ytd search response" 
 Usage: #example
 
-* id = "MD11223344"
+* id = "MedicationDispense11223344"
 * type = #searchset
 
 * total = 2
