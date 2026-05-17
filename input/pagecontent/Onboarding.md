@@ -12,7 +12,7 @@ Health Practitioners providing healthcare in relation to the prescribing and dis
 
 Health Practitioners providing healthcare in relation to the prescribing and dispensing medications, or the recording, treatment or diagnosis of allergies or the risk of adverse drug reactions, this includes administrators recording warnings on behalf of practitioners.
 
-Each organisation and user that has access to the MWS accepts their obligations under the Privacy Act 1993 and the Health Information Privacy Code 1994 to only access information about patients they are treating and are authorised to do so.  
+Each organisation and user that has access to the MWS accepts their obligations under the Privacy Act 2020 and the Health Information Privacy Code 2020 to only access information about patients they are treating and are authorised to do so.  
 
 #### On-boarding and Implementation
 
